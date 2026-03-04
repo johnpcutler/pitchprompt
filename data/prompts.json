@@ -1,18 +1,26 @@
 {
   "SHKLX2": {
     "shortPrompt": "First Name",
-    "sentenceLength": "Insert the recipient’s first name",
+    "sentenceLength": "Insert the recipient's first name",
     "description": "Use a realistic, context-appropriate value. Avoid placeholders or generic stand-ins.",
-    "examples": []
+    "examples": [
+      "Sarah",
+      "James",
+      "Priya",
+      "Marcus",
+      "Elena"
+    ]
   },
   "5032CY": {
     "shortPrompt": "Role Title",
-    "sentenceLength": "Insert the recipient’s specific role title, e.g., “Chief Product Officer,” “VP of Engineering,” “Head of Transformation”",
+    "sentenceLength": "Insert the recipient's specific role title, e.g., “Chief Product Officer,” “VP of Engineering,” “Head of Transformation”",
     "description": "Use a realistic, context-appropriate value. Avoid placeholders or generic stand-ins.",
     "examples": [
       "Chief Product Officer",
       "VP of Engineering",
-      "Head of Transformation"
+      "Head of Transformation",
+      "SVP of Product and Technology",
+      "Head of Strategy and Operations"
     ]
   },
   "QGZ8ED": {
@@ -20,51 +28,77 @@
     "sentenceLength": "Describe their type of company, including industry, size, operating model, and maturity — for example, “multi-product SaaS companies with 500–2,000 employees navigating platform consolidation”",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
     "examples": [
-      "multi-product SaaS companies with 500–2,000 employees navigating platform consolidation"
+      "multi-product SaaS companies with 500–2,000 employees navigating platform consolidation",
+      "B2B FinTech scale-ups with 300–800 employees preparing for a late-stage funding round",
+      "enterprise software companies with 1,000+ engineers managing portfolios across multiple business units",
+      "professional services firms with 500–1,500 people allocating shared delivery capacity across competing client engagements"
     ]
   },
   "SSRTPT": {
     "shortPrompt": "Company Name",
     "sentenceLength": "Insert their company name or a brief descriptor of it",
     "description": "Use a realistic, context-appropriate value. Avoid placeholders or generic stand-ins.",
-    "examples": []
+    "examples": [
+      "Meridian",
+      "Vertex Systems",
+      "your organization",
+      "Acme"
+    ]
   },
   "PLPKVT": {
     "shortPrompt": "Key Challenge",
     "sentenceLength": "Describe a concrete, environment-specific challenge using the exact language they would use internally. Avoid abstract terms like “alignment.” Instead, reference second-level contributors such as fragmented reporting structures, inconsistent prioritization criteria, duplicate data entry, unclear ownership, governance bottlenecks, etc.",
     "description": "Important: this cannot be generic executive shorthand (for example, \"alignment\" or \"visibility\"). Name the second-order cause behind the pain: structural constraints, behavior patterns, or coordination dynamics that create the visible symptom.",
     "examples": [
-      "alignment",
-      "fragmented reporting structures",
-      "inconsistent prioritization criteria",
-      "duplicate data entry",
-      "unclear ownership",
-      "governance bottlenecks"
+      "Product and engineering teams operate off separate roadmaps with no shared source of truth, so capacity commitments made in planning are invisible to the teams accountable for delivery",
+      "Initiative owners spend two to three days each quarter manually reconciling headcount data from Workday against Jira epics just to produce a planning readout that is already stale by the time it lands",
+      "Every cross-functional dependency gets caught late because there is no mechanism for teams to surface blockers upstream — the only forcing function is the weekly status call",
+      "Resource allocation decisions are made in isolation by department heads, so the company frequently over-invests in low-leverage work while strategic bets sit understaffed"
     ]
   },
   "F6LDG7": {
     "shortPrompt": "Key Challenge",
     "sentenceLength": "Describe another specific operational or structural friction point, again in practical, lived language.",
     "description": "Again, avoid generic labels. Describe the underlying mechanism in concrete terms: where handoffs break, where ownership gets fuzzy, where decision rules conflict, or where process design drives friction.",
-    "examples": []
+    "examples": [
+      "Leaders cannot distinguish between teams that are underperforming and teams that were set up to fail — there is no shared record of what was committed, what changed, and why",
+      "The governance process adds three to four weeks to any meaningful strategic pivot because every reallocation requires a multi-stakeholder sign-off chain that was not designed for quarterly speed",
+      "Portfolio reviews surface financial variances but not the behavioral or structural dynamics causing them, so the same categories of waste recur cycle after cycle",
+      "When an initiative stalls, the default response is to add a program manager and a new reporting layer — which delays the real question of whether the work should continue at all"
+    ]
   },
   "9YCMRV": {
     "shortPrompt": "Key Challenge",
     "sentenceLength": "Describe a third grounded challenge that reflects real constraints or tradeoffs they experience.",
     "description": "Keep this one equally specific. Focus on operational reality and tradeoffs, not broad symptom words. The reader should be able to picture the exact dynamic causing the issue.",
-    "examples": []
+    "examples": [
+      "The planning process requires six weeks of preparation but produces commitments that teams stop following by week three of execution — the overhead is high and the half-life is short",
+      "There is no shared language between finance, product, and engineering for describing what the company is investing in, so every cross-functional conversation starts with a taxonomy debate",
+      "The people closest to the work rarely have the authority to surface trade-offs, while the people with authority rarely have the operational context to make good calls",
+      "Strategic priorities are documented at the executive level but never translated into specific resource commitments — so teams are 'aligned on strategy' but executing against completely different interpretations of it"
+    ]
   },
   "M21EY8": {
     "shortPrompt": "Meta Theme",
     "sentenceLength": "Describe the meta-challenge that all of these relate to",
     "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
-    "examples": []
+    "examples": [
+      "the gap between how work gets decided and how it actually gets done",
+      "a structural disconnect between resource ownership and outcome accountability",
+      "the coordination tax that compounds every time strategic intent has to travel through too many layers before reaching the teams doing the work",
+      "the inability to make and revisit capacity decisions with enough speed and context to stay strategically coherent"
+    ]
   },
   "0XNTDJ": {
     "shortPrompt": "Root Cause",
     "sentenceLength": "Meta-diagnosis of why these challenges remain",
     "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
-    "examples": []
+    "examples": [
+      "the tools and processes used to plan work were designed for a slower, more predictable world — they have not kept pace with the speed at which strategy needs to adapt",
+      "accountability for outcomes and accountability for resources sit in different organizational structures with no shared language or interface between them",
+      "every attempt to fix the problem optimizes for a local symptom rather than the underlying coordination architecture",
+      "the people closest to the work rarely have the authority to surface trade-offs, while the people with authority rarely have the operational context to make good calls"
+    ]
   },
   "1PKZRQ": {
     "shortPrompt": "Industry Trend",
@@ -73,14 +107,21 @@
     "examples": [
       "AI copilots for strategy",
       "enterprise agility 2.0",
-      "lean portfolio management"
+      "lean portfolio management",
+      "continuous planning and rolling forecasts",
+      "outcome-based operating models"
     ]
   },
   "491OAD": {
     "shortPrompt": "Core Hope",
     "sentenceLength": "Underlying hope that these buzzword ideas and discussions can solve the challenge",
     "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
-    "examples": []
+    "examples": [
+      "teams could operate with full autonomy while leaders retain genuine portfolio-level visibility and control",
+      "strategic priorities could be communicated once and automatically cascade into team-level plans without a layer of manual translation",
+      "organizations could have real-time clarity on where their capital is going and what it is actually producing — without waiting for a quarterly review",
+      "planning and execution could live in the same system so the gap between intent and action becomes auditable, not invisible"
+    ]
   },
   "O5R1N5": {
     "shortPrompt": "Current Shift",
@@ -91,7 +132,9 @@
       "AI acceleration",
       "regulatory pressure",
       "distributed teams",
-      "market volatility"
+      "market volatility",
+      "post-acquisition integration pressure",
+      "executive leadership transitions"
     ]
   },
   "JYVHWE": {
@@ -101,7 +144,9 @@
     "examples": [
       "increase complexity",
       "reduce margin for error",
-      "amplify coordination load"
+      "amplify coordination load",
+      "compress the window in which a good decision is still possible",
+      "raise the cost of misallocated capital at exactly the moment when that capital is hardest to replace"
     ]
   },
   "55H0Y3": {
@@ -112,7 +157,9 @@
       "adding another tool",
       "layering governance",
       "hiring PMO roles",
-      "creating reporting dashboards"
+      "creating reporting dashboards",
+      "running more frequent all-hands syncs",
+      "adding a Chief of Staff to bridge the strategy-to-execution gap"
     ]
   },
   "R061BJ": {
@@ -123,7 +170,9 @@
       "reinforcing silos",
       "increasing process overhead",
       "creating translation burdens",
-      "lacking shared context"
+      "lacking shared context",
+      "treating the symptom rather than the coordination architecture causing it",
+      "optimizing for the visibility of the reporting layer rather than the quality of the decisions it is supposed to inform"
     ]
   },
   "25VEKS": {
@@ -134,26 +183,43 @@
       "heavy centralization",
       "radical autonomy",
       "spreadsheet systems",
-      "custom internal tooling"
+      "custom internal tooling",
+      "a dedicated planning ops team whose full-time job is maintaining the portfolio model by hand",
+      "a bi-weekly leadership war room that exists solely to manually reconcile conflicting priorities"
     ]
   },
   "7I2H0S": {
     "shortPrompt": "New Pain",
     "sentenceLength": "Describe the new pains those approaches create — fragility, lack of scalability, loss of visibility, political friction, etc.",
     "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
-    "examples": []
+    "examples": [
+      "brittle processes that break the moment a key person leaves or the org chart changes",
+      "lack of institutional memory — every new planning cycle starts from scratch because nothing was captured in a durable, queryable form",
+      "the overhead of maintaining the workaround itself often exceeds the overhead it was supposed to eliminate",
+      "political friction when the workaround gives one team visibility into another team's prioritization decisions without a shared framework for interpreting what they see"
+    ]
   },
   "8YSDI4": {
     "shortPrompt": "Leader Quote",
     "sentenceLength": "Insert a sharp, emotionally resonant quote that captures the tension and urgency of the moment.",
     "description": "Make it emotionally resonant and specific. Use one believable line that sounds like something a real executive would actually say.",
-    "examples": []
+    "examples": [
+      "We spend more time debating what we're working on than actually working on it — and I still can't tell you if we're working on the right things.",
+      "I have seventeen dashboards and none of them tell me what I actually need to know before the next board meeting.",
+      "Our planning process is sophisticated, thorough, and completely disconnected from what the teams are actually doing by week three of the quarter.",
+      "We keep hiring more program managers to manage the coordination load instead of fixing the system that creates it."
+    ]
   },
   "BFA5OX": {
     "shortPrompt": "Reframe Line",
     "sentenceLength": "Insert a reframing statement that challenges the assumptions underlying their current tradeoffs",
     "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
-    "examples": []
+    "examples": [
+      "the coordination overhead required to stay strategically coherent didn't have to scale with organizational complexity",
+      "you didn't have to choose between giving teams autonomy and knowing where your capital is actually going",
+      "planning and execution didn't have to live in separate systems, maintained by separate teams, producing separate versions of the truth",
+      "portfolio-level visibility didn't require a dedicated reporting function and a three-week data collection cycle"
+    ]
   },
   "K9SQNG": {
     "shortPrompt": "Tradeoff Pair",
@@ -162,14 +228,21 @@
     "examples": [
       "control and autonomy",
       "flexibility and structure",
-      "visibility and team independence"
+      "visibility and team independence",
+      "strategic coherence and execution speed",
+      "centralized oversight and decentralized decision-making"
     ]
   },
   "SASM3A": {
     "shortPrompt": "Target Outcome",
     "sentenceLength": "Describe a new outcome possibility that directly mirrors their challenges",
     "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
-    "examples": []
+    "examples": [
+      "real-time portfolio clarity across every active initiative — with no manual aggregation",
+      "planning cycles cut from six weeks to two, with no loss of strategic coherence",
+      "teams operating autonomously within clear constraints, with leaders able to see trade-offs in context before they become incidents",
+      "a single shared record of what was decided, why, and how resources moved as a result — accessible to everyone who needs it"
+    ]
   },
   "NNIBKH": {
     "shortPrompt": "Cost Driver",
@@ -180,32 +253,52 @@
       "complexity",
       "political friction",
       "cost",
-      "rigidity"
+      "rigidity",
+      "the coordination infrastructure required to maintain it"
     ]
   },
   "HZE7RI": {
     "shortPrompt": "Big Mission",
     "sentenceLength": "Describe the big mission — concrete, ambitious, but grounded in business impact",
     "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
-    "examples": []
+    "examples": [
+      "make the gap between strategy and execution visible, navigable, and closeable — for every team in every company",
+      "give every organization the operating infrastructure to make and revise resource decisions at the speed their market demands",
+      "replace the coordination tax with a coordination advantage — where the act of working across teams generates insight instead of consuming it",
+      "build the connective tissue between strategy, capital, and execution that most companies are currently trying to stitch together with spreadsheets and slide decks"
+    ]
   },
   "EGQLZF": {
     "shortPrompt": "Future Story",
     "sentenceLength": "Describe a short story of the improved state — how teams operate, how leaders make decisions, what changes behaviorally and structurally",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "product and engineering leaders look at the same dashboard every Monday — not because someone spent Friday pulling data, but because the system maintains that view continuously. When a priority shifts, every affected team sees the downstream implication immediately, and the decision that caused the shift is right there in context.",
+      "quarterly planning takes four days instead of six weeks, because the baseline is always current. Leaders spend their time on trade-offs, not on reconciling numbers. Teams walk out of planning knowing exactly what they are committing to and why.",
+      "a CPO can walk into a board meeting and show exactly how capital is moving across the portfolio — which bets are funded, which are starved, and what the expected return is on each — without a single spreadsheet being prepared the night before."
+    ]
   },
   "H5DBQ7": {
     "shortPrompt": "Main Obstacle",
     "sentenceLength": "Describe a realistic obstacle — technical feasibility, adoption risk, category fatigue, legacy lock-in, etc.",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "legacy data models in existing tools meant the structured data our approach needed did not exist yet — it had to be captured from scratch",
+      "category fatigue — executives had heard the 'single source of truth' pitch from too many vendors to take it seriously without proof",
+      "adoption risk was real: the workflows we needed to change were deeply embedded in how people earned credit and visibility",
+      "the skeptics argued that any centralized system would become a compliance burden rather than a decision tool, and they had enough prior evidence to make that case credibly"
+    ]
   },
   "P8ZV1J": {
     "shortPrompt": "Why Now",
     "sentenceLength": "Explain why the challenge seemed surmountable — technological shifts, market timing, new approaches, customer validation, etc.",
     "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
-    "examples": []
+    "examples": [
+      "the shift toward continuous planning — accelerated by the pandemic — had already broken the annual planning model for most companies, creating genuine demand for something better",
+      "a new generation of data infrastructure made it possible to keep a structured portfolio model current without a dedicated team maintaining it",
+      "our first design partners were already trying to solve this with internally-built tools, which proved the appetite was real and the market was not serving it",
+      "AI made it tractable to surface the right context at the right moment — something that previously required a human analyst embedded in every planning conversation"
+    ]
   },
   "SGM0OU": {
     "shortPrompt": "Market Label",
@@ -214,68 +307,118 @@
     "examples": [
       "AI-native operating model platform",
       "strategic portfolio system",
-      "etc"
+      "operating model intelligence layer",
+      "portfolio orchestration platform"
     ]
   },
   "6UF91Y": {
     "shortPrompt": "Tool Category",
     "sentenceLength": "Insert an existing category you want to clearly distance from",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "project management tool",
+      "work tracking system",
+      "OKR platform",
+      "reporting dashboard"
+    ]
   },
   "76GJ4W": {
     "shortPrompt": "Tool Category",
     "sentenceLength": "Insert another adjacent but inaccurate category",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "resource management software",
+      "workforce planning tool",
+      "BI platform",
+      "collaboration hub"
+    ]
   },
   "EZS1FW": {
     "shortPrompt": "Label Word",
     "sentenceLength": "Insert the first word in your positioning label",
     "description": "Choose plain language your buyer already understands; avoid category jargon unless you can define it clearly.",
-    "examples": []
+    "examples": [
+      "AI-native",
+      "operating model",
+      "strategic",
+      "portfolio"
+    ]
   },
   "48WZ8Y": {
     "shortPrompt": "Term Meaning",
     "sentenceLength": "Explain what that word specifically means in your context — not the buzzword definition",
     "description": "Choose a trend the audience already recognizes and connect it to their actual operating context.",
-    "examples": []
+    "examples": [
+      "not that we bolt AI onto existing workflows — we mean the system is designed from the ground up around machine-readable context, so AI can reason across your portfolio without needing a human to pre-structure the query",
+      "not the org chart or the RACI matrix — we mean the actual system of decisions, resources, and accountabilities that determines how work gets prioritized and capital gets deployed",
+      "not high-level goal-setting, but the active management of trade-offs: what to fund, what to delay, what to stop, and how those decisions ripple through the organization",
+      "not the financial portfolio — we mean the full set of active work investments the company is making, treated as a coherent whole rather than a sum of independent team backlogs"
+    ]
   },
   "VSVH6A": {
     "shortPrompt": "Label Word",
     "sentenceLength": "Insert the second word in your positioning label",
     "description": "Choose plain language your buyer already understands; avoid category jargon unless you can define it clearly.",
-    "examples": []
+    "examples": [
+      "platform",
+      "intelligence",
+      "system",
+      "engine"
+    ]
   },
   "MSE7QI": {
     "shortPrompt": "Term Meaning",
     "sentenceLength": "Clarify the intended meaning and boundaries of that word",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "not another feature module in a project management suite — we mean a dedicated layer of infrastructure that connects strategy, resources, and execution across the organization",
+      "not an analytics layer that surfaces patterns after the fact — we mean active, in-context guidance that helps leaders make better decisions before they compound into problems",
+      "not a set of reports or dashboards — we mean a structured, shared representation of how the organization is actually operating, updated continuously and queryable by anyone who needs it"
+    ]
   },
   "7WT1SM": {
     "shortPrompt": "Tool Category",
     "sentenceLength": "Describe a common misunderstanding or conflated tool category",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "project management tool like Jira or Asana",
+      "OKR platform like Lattice or Gtmhub",
+      "resource planning software like Planview or Workfront",
+      "BI platform like Tableau or Power BI"
+    ]
   },
   "LIRG6L": {
     "shortPrompt": "Tool Category",
     "sentenceLength": "Another category that customers might incorrectly assume",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "a strategy deck generator",
+      "an enterprise agile coaching framework",
+      "a lightweight planning add-on for Jira",
+      "a performance management system"
+    ]
   },
   "U2IPOY": {
     "shortPrompt": "Reference Mix",
     "sentenceLength": "Insert three approaches, tools, or solution categories your audience already understands",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "a strategic portfolio tool, an OKR system, and a resource planning platform",
+      "Jira for execution tracking, Workday for headcount, and a quarterly planning process run in slides",
+      "a portfolio roadmap, a capacity model in Excel, and a set of weekly status reports",
+      "lean portfolio management practices, a business intelligence layer, and a project governance framework"
+    ]
   },
   "WZKAAM": {
     "shortPrompt": "Cost Driver",
     "sentenceLength": "Call out the obvious downsides those approaches normally have",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "the integration overhead, the data maintenance burden, and the three-week lag between decisions and reports",
+      "the organizational scar tissue they create — each one adds process weight and reduces the team's ability to move",
+      "the siloed data models that prevent them from producing a coherent view without a human analyst bridging the gaps",
+      "the assumption that the problem is a reporting problem, when the real issue is a decision-making architecture problem"
+    ]
   },
   "SU8663": {
     "shortPrompt": "Tool Fit",
@@ -285,94 +428,162 @@
       "Jira",
       "BI tools",
       "HR systems",
-      "roadmapping tools"
+      "roadmapping tools",
+      "Workday",
+      "Linear"
     ]
   },
   "1RWH1S": {
     "shortPrompt": "Tool Fit",
     "sentenceLength": "List tools or processes that become redundant, simplified, or redefined",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "manual quarterly planning decks, siloed headcount trackers, and the rotation of status-report spreadsheets that nobody trusts",
+      "the Excel capacity model, the slide-based roadmap, and the ad-hoc Slack threads where real prioritization decisions actually happen",
+      "the weekly status call that exists solely because there is no shared operational record — and the reporting analyst role that supports it",
+      "duplicated data entry across Jira, Workday, and finance systems that currently produces three different answers to the same question"
+    ]
   },
   "9PHPHL": {
     "shortPrompt": "User Persona",
     "sentenceLength": "Insert a specific persona, e.g., “Product Operations Lead”",
     "description": "Be persona-specific: describe concrete workflows, decisions, and responsibilities.",
     "examples": [
-      "Product Operations Lead"
+      "Product Operations Lead",
+      "Head of Planning and Portfolio Management",
+      "Chief of Staff to the CPO",
+      "VP of Product Operations"
     ]
   },
   "PVGS4C": {
     "shortPrompt": "Usage Pattern",
     "sentenceLength": "Describe concretely how they interact with the product — workflows, actions, responsibilities",
     "description": "Be persona-specific: describe concrete workflows, decisions, and responsibilities.",
-    "examples": []
+    "examples": [
+      "build and maintain the operational model — mapping active initiatives to teams, capacity, and strategic priorities — so leaders always have a current, structured view of what the organization is actually doing",
+      "run the planning cycle: collecting capacity commitments, surfacing conflicts, and producing a shared plan that teams can actually execute against",
+      "manage the signal layer — tracking where plans are drifting from commitments and escalating the ones that need a decision before they become a crisis",
+      "configure the taxonomy that makes portfolio data comparable across teams, and own the governance process that keeps it current"
+    ]
   },
   "LKUCN6": {
     "shortPrompt": "Job Goal",
     "sentenceLength": "Describe their job to be done",
     "description": "Be persona-specific: describe concrete workflows, decisions, and responsibilities.",
-    "examples": []
+    "examples": [
+      "eliminate the two to three weeks of manual data collection that currently precede every planning conversation",
+      "give senior leadership a real-time view of portfolio health without creating a dedicated reporting function to maintain it",
+      "make the planning process less of a negotiation and more of a structured decision — with shared data and explicit trade-offs visible to everyone in the room",
+      "build the operational infrastructure that lets the company scale its planning discipline without scaling the team that runs it"
+    ]
   },
   "3U1M78": {
     "shortPrompt": "User Persona",
     "sentenceLength": "Insert another persona",
     "description": "Be persona-specific: describe concrete workflows, decisions, and responsibilities.",
-    "examples": []
+    "examples": [
+      "Chief Product Officer",
+      "VP of Engineering",
+      "Head of Strategy and Operations",
+      "SVP of Product and Technology"
+    ]
   },
   "WYJTM2": {
     "shortPrompt": "How Perceive",
     "sentenceLength": "Describe how they perceive or position it internally",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "their command center — the one place where they can see what the organization is committed to, what is at risk, and what trade-offs are in front of them, before those trade-offs make the decision for them",
+      "the system that finally makes the quarterly planning conversation a genuine strategic discussion rather than a data reconciliation exercise",
+      "the infrastructure that makes autonomous teams and portfolio-level coherence compatible — not a choice between them",
+      "the thing that lets them walk into a board meeting with confidence instead of caveats"
+    ]
   },
   "JHJYK3": {
     "shortPrompt": "Usage Pattern",
     "sentenceLength": "Describe a differentiated usage pattern",
     "description": "Be persona-specific: describe concrete workflows, decisions, and responsibilities.",
-    "examples": []
+    "examples": [
+      "less about configuration and more about consumption — they check the portfolio view at the start of the week, flag the items that need a decision, and use the system to communicate the context behind those decisions to their direct reports and peers",
+      "they use the exception view to scan for capacity conflicts and stalled initiatives, and they use the decision log to maintain a shared record of what was changed and why",
+      "they engage primarily through the briefing layer — a synthesized view of what is moving, what is stuck, and what needs their attention — rather than digging into the underlying data themselves"
+    ]
   },
   "GZ4VHW": {
     "shortPrompt": "Target Outcome",
     "sentenceLength": "Describe their specific outcome",
     "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
-    "examples": []
+    "examples": [
+      "the confidence to make and communicate resource decisions quickly, with enough context that teams understand the reasoning and can execute without a follow-up meeting",
+      "a coherent story for the board about how capital is moving across the portfolio and what the expected return is — without needing an analyst to build the deck the night before",
+      "the ability to run portfolio reviews that surface the right trade-offs instead of relitigating the same prioritization debates cycle after cycle",
+      "visibility into which teams are set up to succeed and which are structurally under-resourced — before it shows up in the quarterly results"
+    ]
   },
   "U3AJ08": {
     "shortPrompt": "Brand Promise",
     "sentenceLength": "Reiterate your brand promise clearly and concretely.",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "Strategy and execution, finally in the same room.",
+      "Know where your capital is going. Know what it is producing. Change course before it is too late.",
+      "The operating clarity your organization needs to move fast without losing coherence.",
+      "Give every leader the context to make good decisions. Give every team the clarity to execute them."
+    ]
   },
   "GRKGMP": {
     "shortPrompt": "Core Feature",
     "sentenceLength": "core feature status quo focuses on",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "feature-level project tracking",
+      "static quarterly roadmaps",
+      "headcount-based capacity planning",
+      "manually curated reporting dashboards"
+    ]
   },
   "SXNORH": {
     "shortPrompt": "Conscious Tradeoff",
     "sentenceLength": "the sacrifice of shifting to Dotwork",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "the pixel-level Gantt chart and the granular task dependency view",
+      "deep per-ticket reporting and individual velocity tracking",
+      "the ability to manage at the task level — Dotwork operates above the level of individual work items",
+      "the kind of configuration flexibility that requires a dedicated admin to maintain"
+    ]
   },
   "T3XSVG": {
     "shortPrompt": "Target Outcome",
     "sentenceLength": "new outcome we produce",
     "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
-    "examples": []
+    "examples": [
+      "leaders gain portfolio-level clarity without the overhead of a dedicated reporting function",
+      "the organization can move faster at the strategic level while teams retain the autonomy to determine how they execute",
+      "planning becomes a continuous process rather than a quarterly event — with decisions captured in context and visible to everyone who needs them",
+      "the coordination layer costs a fraction of what it costs today, and produces a much clearer signal"
+    ]
   },
   "N5YRK5": {
     "shortPrompt": "Conscious Tradeoff",
     "sentenceLength": "areas we have deprioritized",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "deep task-level granularity and individual contributor tracking",
+      "out-of-the-box integrations with every niche tool category",
+      "highly configurable workflow automation for specific team rituals",
+      "advanced Gantt and timeline visualization for project-level scheduling"
+    ]
   },
   "8886JY": {
     "shortPrompt": "Observed Signal",
     "sentenceLength": "contrary outcome or pattern that makes deprioritizing that rational",
     "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
-    "examples": []
+    "examples": [
+      "the teams that get the most value from Dotwork are the ones who have already given up on task-level tracking as a management tool — they operate at the initiative and outcome level, and that is exactly where our model shines",
+      "customers consistently tell us they tried to solve this with more granular tracking before finding us, and the overhead of maintaining that granularity was itself a source of coordination drag",
+      "the organizations most frustrated by our limitations in this area are also the ones least likely to benefit from what we do well — we have learned to treat that as a useful filter"
+    ]
   },
   "4VE9VJ": {
     "shortPrompt": "First-Order",
@@ -381,26 +592,43 @@
     "examples": [
       "reduce reporting overhead",
       "increase capital allocation clarity",
-      "shorten planning cycles"
+      "shorten planning cycles",
+      "reduce the time between a strategic decision and its reflection in team-level plans",
+      "cut the number of people required to produce and maintain the portfolio view"
     ]
   },
   "YPW31K": {
     "shortPrompt": "Second-Order",
     "sentenceLength": "Describe what changes downstream — decision speed, prioritization accuracy, cross-team coordination, etc.",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "decision speed at the portfolio level — leaders can see trade-offs in context and make calls without waiting for a data pull",
+      "prioritization accuracy — teams are working on the things that are actually most important, not the things that were committed to in a planning cycle three months ago",
+      "cross-team coordination quality — dependencies are surfaced earlier, and the teams managing them have shared context instead of conflicting assumptions",
+      "the planning conversation itself — it shifts from data reconciliation to genuine strategic trade-off discussion"
+    ]
   },
   "A39M53": {
     "shortPrompt": "Long-Term",
     "sentenceLength": "Describe final business impact — improved capital efficiency, faster time to value, reduced waste, increased strategic coherence, etc.",
     "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
-    "examples": []
+    "examples": [
+      "a measurable improvement in capital efficiency — fewer resources deployed against low-leverage work, more against the initiatives that actually move the needle",
+      "faster time to value for strategic priorities — because the gap between decision and execution is shorter and less lossy",
+      "reduced strategic drift — the organization stays coherent as it scales, rather than fragmenting into independent operating units with no shared model of what matters",
+      "a durable competitive advantage in execution speed — the ability to reallocate capital and redirect effort faster than competitors still running annual planning cycles"
+    ]
   },
   "VDZJ71": {
     "shortPrompt": "Current Stack",
     "sentenceLength": "List the current dominant approaches",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "quarterly planning decks, spreadsheet-based capacity models, and weekly status reports",
+      "Jira for execution, Workday for headcount, Excel for the planning model, and slides for the narrative",
+      "OKR platforms, project management tools, and BI dashboards — none of which talk to each other",
+      "a combination of governance rituals, reporting layers, and PMO functions that together approximate what a shared operating model should provide"
+    ]
   },
   "FU3BDT": {
     "shortPrompt": "Ultimate Goal",
@@ -409,134 +637,241 @@
     "examples": [
       "strategic clarity",
       "capital efficiency",
-      "execution confidence"
+      "execution confidence",
+      "portfolio coherence at scale",
+      "the ability to move faster than their market without losing strategic alignment"
     ]
   },
   "Y6OTI5": {
     "shortPrompt": "Status Option",
     "sentenceLength": "Status quo option",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "traditional project management tools",
+      "OKR platforms that capture goals but not the resource decisions behind them",
+      "quarterly planning decks maintained by a central ops team",
+      "resource management software built for project-based delivery work"
+    ]
   },
   "WOJF67": {
     "shortPrompt": "Key Differentiator",
     "sentenceLength": "Key differentiator",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "maintains a live, structured model of your entire portfolio — not a snapshot, not a dashboard, but a continuously updated operating record",
+      "connects the 'what we decided' to the 'what we are doing' in a single system, so the gap between strategy and execution becomes visible and auditable",
+      "gives leaders portfolio-level clarity without requiring a dedicated team to aggregate, clean, and present data every week",
+      "treats planning as a continuous process rather than a periodic event — so when strategy shifts, the system updates rather than starting over"
+    ]
   },
   "3WL09C": {
     "shortPrompt": "Target Outcome",
     "sentenceLength": "Outcome",
     "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
-    "examples": []
+    "examples": [
+      "make and revise strategic commitments at the speed your market demands — without losing operational coherence",
+      "run your planning process in days instead of weeks, with better data and fewer surprises",
+      "give every leader the context to make good decisions without adding headcount to produce the clarity they need",
+      "move from reactive portfolio management to deliberate capital allocation — with a live model that makes the cost of every trade-off visible"
+    ]
   },
   "A7BO1B": {
     "shortPrompt": "Core Approach",
     "sentenceLength": "Describe the fundamental architectural or philosophical shift",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "modeling the operating layer as a structured graph of decisions, resources, and outcomes rather than a hierarchy of tasks and milestones",
+      "building the system around the decision — not the project. Every piece of data in Dotwork is attached to the choice that created it, so the reasoning is never lost.",
+      "treating the portfolio model as the product — a living artifact that the whole organization reads from and writes to, rather than a deliverable produced by a central team",
+      "starting from the question 'what decisions need to be made?' rather than 'what work needs to be tracked?' — which changes everything about the data model"
+    ]
   },
   "5WRDBC": {
     "shortPrompt": "Key Constraint",
     "sentenceLength": "Describe their constraints",
     "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
-    "examples": []
+    "examples": [
+      "data models designed for project tracking that make it structurally difficult to reason about initiatives, outcomes, and capital in the same system",
+      "architecture built for individual team use that cannot aggregate coherently without a purpose-built reporting layer on top",
+      "a product philosophy centered on task-level fidelity that makes portfolio-level abstraction feel bolted-on rather than native",
+      "years of customer commitments to existing feature sets that constrain how radically they can rethink the underlying model"
+    ]
   },
   "3F9YXW": {
     "shortPrompt": "Core Approach",
-    "sentenceLength": "Describe specific architectural or design freedoms you’ve used",
+    "sentenceLength": "Describe specific architectural or design freedoms you've used",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "build the data model from scratch around portfolio decisions rather than adapting a project model upward",
+      "design the user experience for the executive and ops audience from day one, rather than building for individual contributors and trying to add a leadership layer later",
+      "treat AI not as a feature but as a first-class design constraint — every data structure in the system was built to be machine-readable and queryable from the start",
+      "make integration the default rather than the exception — we assumed from the beginning that we would need to connect to Jira, Workday, and finance systems, and we built the data model to support that cleanly"
+    ]
   },
   "D6FIN2": {
     "shortPrompt": "Core Viewpoint",
     "sentenceLength": "State a distinctive, potentially controversial viewpoint",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "most organizations do not have a strategy problem — they have a translation problem. The strategy exists. The execution exists. There is just no system connecting them.",
+      "the coordination overhead most companies accept as a cost of doing business is actually a design flaw — and it is solvable at the infrastructure level, not the process level",
+      "OKRs, quarterly planning, and portfolio reviews are all attempts to solve the same underlying problem — none of them quite work because they are operating on top of an architecture that was not designed for strategic coherence",
+      "adding more headcount to manage coordination is the organizational equivalent of buying a bigger hard drive when what you need is a database"
+    ]
   },
   "W8CHUM": {
     "shortPrompt": "Core Principle",
     "sentenceLength": "State the underlying principle driving your approach",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "if you can see the gap between your intent and your execution clearly enough, you can close it — most organizations cannot see it, which is why it persists",
+      "good decisions at the portfolio level require shared context, not shared opinions — the system should provide the context so the conversation can be about the trade-off, not the data",
+      "the organizations that will win over the next decade are not the ones with the best strategy — they are the ones who can move capital and attention to the right place faster than their competitors",
+      "autonomy and coherence are not in tension. They are only in tension when the system does not exist to support both simultaneously."
+    ]
   },
   "SN0RT2": {
     "shortPrompt": "Customer Context",
-    "sentenceLength": "Describe a customer’s industry, size, and operating context",
+    "sentenceLength": "Describe a customer's industry, size, and operating context",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "a 1,200-person B2B SaaS company in the HR tech space, running a multi-product portfolio across three business units after a series of acquisitions",
+      "a 600-person FinTech scale-up preparing for a Series D, with a product org that had grown faster than its planning infrastructure",
+      "a professional services firm with 800 people and a portfolio of 40+ active client engagements, struggling to allocate shared resources across competing priorities",
+      "a mid-market SaaS company with 400 engineers across eight product teams, each running their own planning process with no shared model of cross-team capacity"
+    ]
   },
   "0MUYBO": {
     "shortPrompt": "Problem Frame",
     "sentenceLength": "Reframe their problem in concrete terms",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "an inability to see where their 200-person engineering organization was actually spending its time — not because the data did not exist, but because it lived in four different systems with no reconciliation layer",
+      "a planning process that consumed eight weeks of leadership time per quarter and still produced a plan that teams stopped following by week three of execution",
+      "the structural impossibility of answering 'what are we actually working on and why?' without a multi-week data collection exercise",
+      "a 40% gap between the strategic priorities the executive team believed they were funding and the work their teams were actually doing"
+    ]
   },
   "7FB7UQ": {
     "shortPrompt": "Target Outcome",
     "sentenceLength": "Quantified outcome",
     "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
-    "examples": []
+    "examples": [
+      "a 60% reduction in planning cycle time and a 35% improvement in on-strategy delivery within two quarters",
+      "full portfolio visibility in under 24 hours — a process that previously required two weeks of manual data collection",
+      "three planning cycles run in four days each, down from the six-week process they had been running for two years",
+      "a 25% reduction in misallocated engineering capacity within one quarter of deployment"
+    ]
   },
   "RVX30X": {
     "shortPrompt": "Key Capability",
     "sentenceLength": "Specific Dotwork capabilities",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "Dotwork's portfolio model and automated data sync with their existing Jira and Workday instances",
+      "the initiative mapping layer and continuous capacity tracking, which replaced their quarterly spreadsheet process",
+      "the decision log and trade-off visualization, which gave their leadership team a shared operating record for the first time",
+      "the cross-team dependency graph and resource allocation dashboard, which surfaced conflicts two to three weeks earlier than their previous process"
+    ]
   },
   "MA3BNX": {
     "shortPrompt": "User Persona",
     "sentenceLength": "Customer description",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "a 900-person digital health company scaling from startup to enterprise across three product lines",
+      "a publicly traded infrastructure software company with a complex multi-segment portfolio and a recent leadership change",
+      "a 500-person marketplace platform operating in a high-velocity market with frequent strategic pivots",
+      "a Series C SaaS company in the legal tech space with a product org growing faster than its operational infrastructure"
+    ]
   },
   "KFEYSX": {
     "shortPrompt": "Problem Frame",
     "sentenceLength": "Reframed problem",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "a planning process that required seventeen people for six weeks and still produced a plan nobody trusted",
+      "an inability to answer basic portfolio questions — what is funded, what is not, what changed and why — without days of manual aggregation",
+      "a 'single source of truth' that existed in theory but was maintained by one person who was also the single point of failure for every planning cycle",
+      "three separate portfolio views maintained by finance, product, and engineering — each correct from its own angle, none compatible with the others"
+    ]
   },
   "BQAX81": {
     "shortPrompt": "Measured Result",
     "sentenceLength": "Quantified outcome",
     "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
-    "examples": []
+    "examples": [
+      "a 40% reduction in coordination overhead, measured by the hours their ops team spent aggregating planning data each quarter",
+      "the ability to run their quarterly planning process in one week rather than six, with better cross-team alignment than they had achieved in previous cycles",
+      "a 30% improvement in on-strategy execution within two quarters, attributable to the shared portfolio model replacing conflicting team-level roadmaps",
+      "elimination of the quarterly data reconciliation phase that previously consumed the first three weeks of every planning cycle"
+    ]
   },
   "WHGFOJ": {
     "shortPrompt": "Key Capability",
     "sentenceLength": "Key functionality",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "the portfolio snapshot and automated weekly digest, which replaced the manual status report cycle",
+      "the initiative-to-team mapping and capacity tracking layer, which made the capacity model self-maintaining",
+      "the scenario planning and trade-off view, which transformed their quarterly planning conversation from a data exercise into a strategic discussion",
+      "the integration layer that unified Jira, Workday, and their financial planning system into a single operational record"
+    ]
   },
   "NSJBXE": {
     "shortPrompt": "User Persona",
     "sentenceLength": "Customer description",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "a 700-person B2B software company in the compliance and risk space, operating across five geographic regions with distinct planning cadences",
+      "a late-stage startup building infrastructure for the logistics industry, with 350 people and a portfolio diversified across two market segments",
+      "a 1,500-person enterprise software company managing a portfolio of 90+ active initiatives across four product divisions",
+      "a mid-market SaaS company that had tripled headcount in eighteen months and was operating its planning process the same way it had when it had 80 people"
+    ]
   },
   "OK45FP": {
     "shortPrompt": "Problem Frame",
     "sentenceLength": "Reframed challenge",
     "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
-    "examples": []
+    "examples": [
+      "a governance process that added four to six weeks of latency to every strategic reallocation — making it structurally impossible to respond to market shifts within a planning quarter",
+      "a portfolio of 90 active initiatives with no shared model of relative priority — meaning every resource conversation started from scratch",
+      "a leadership team that was technically aligned on strategy but had no shared operating record of what that strategy meant for how resources were actually deployed",
+      "the political overhead of managing cross-team priorities without a neutral, data-grounded system — every prioritization conversation became a negotiation between departments"
+    ]
   },
   "T24XK0": {
     "shortPrompt": "Measured Result",
     "sentenceLength": "Quantified outcome",
     "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
-    "examples": []
+    "examples": [
+      "a 50% reduction in the time from strategic decision to team-level execution, from an average of six weeks to under three",
+      "the first portfolio review in three years that required no pre-work from the operations team — the data was already current",
+      "elimination of the quarterly reforecast exercise, saving approximately 400 hours of leadership and ops time per year",
+      "a 20% improvement in capital allocation accuracy, measured by the delta between funded priorities and end-of-quarter delivered outcomes"
+    ]
   },
   "B44BCD": {
     "shortPrompt": "Key Capability",
     "sentenceLength": "Specific capabilities or workflows",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "Dotwork's live portfolio model and the governance workflow, which automated the approval and communication of strategic reallocations",
+      "the operating model graph, which gave each product division a shared view of cross-team dependencies and funding decisions",
+      "the briefing layer and decision log, which replaced the weekly leadership status meeting with an asynchronous operating record",
+      "the scenario modeling and initiative prioritization tools, which gave the leadership team a structured way to evaluate trade-offs before committing to a reallocation"
+    ]
   },
   "YG8ITL": {
     "shortPrompt": "Dollar Range",
     "sentenceLength": "insert % estimate or rough dollar range of waste / inefficiency / misallocated capital they might plausibly be experiencing",
     "description": "Use credible numbers and defensible ranges. Avoid inflated claims.",
-    "examples": []
+    "examples": [
+      "10% of your annual engineering spend",
+      "$2–5M in misallocated capital",
+      "15–20% of your leadership team's available time per quarter",
+      "three to four planning cycles' worth of rework per year"
+    ]
   },
   "Q2JFRT": {
     "shortPrompt": "Key Friction",
@@ -546,32 +881,53 @@
       "duplicated planning effort",
       "stalled initiatives",
       "unclear capital allocation",
-      "coordination overhead"
+      "coordination overhead",
+      "the gap between what leadership believes is funded and what teams are actually working on"
     ]
   },
   "CS8BL2": {
     "shortPrompt": "Dollar Range",
     "sentenceLength": "insert meaningful but believable annual dollar impact range",
     "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
-    "examples": []
+    "examples": [
+      "$3–8M in recovered capacity and reduced coordination overhead annually",
+      "$5–12M in improved capital allocation and faster time to value on strategic priorities",
+      "$1.5–4M in planning overhead alone, before accounting for the downstream cost of executing against the wrong priorities",
+      "a meaningful fraction of your annual engineering budget — typically 8–15% when misaligned priorities are properly accounted for"
+    ]
   },
   "BYIQPM": {
     "shortPrompt": "Company Type",
     "sentenceLength": "their company type",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "mid-market B2B SaaS companies with 300–1,500 employees",
+      "multi-product technology companies managing complex portfolios across multiple business units",
+      "high-growth scale-ups where the planning infrastructure has not kept pace with organizational complexity",
+      "enterprise software companies where the coordination cost of strategic alignment has become a structural tax on execution speed"
+    ]
   },
   "CY7YC6": {
     "shortPrompt": "Status Quo",
     "sentenceLength": "status quo approach",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "quarterly planning in slides and spreadsheets",
+      "OKR platforms that capture goals but not the resource decisions behind them",
+      "manual reporting cycles maintained by a central ops team",
+      "a combination of Jira, Workday, and Excel that approximates a portfolio model without actually being one"
+    ]
   },
   "SLH36N": {
     "shortPrompt": "Drag Mechanism",
     "sentenceLength": "describe mechanism — slower decisions, lower throughput, hidden coordination tax, misaligned investments",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "slower decisions, because the context required to make a good call takes longer to assemble than the window in which the decision is relevant",
+      "hidden coordination tax — the hours spent in alignment meetings, status calls, and data reconciliation that do not appear on any balance sheet but accumulate into a significant drag on execution speed",
+      "misaligned investments that compound quarter over quarter, as teams continue to optimize for local priorities that have drifted from the organization's strategic intent",
+      "lower throughput on strategic priorities, because the best people are pulled into the planning and coordination process rather than the work itself"
+    ]
   },
   "PV7418": {
     "shortPrompt": "Pilot Format",
@@ -588,43 +944,78 @@
     "shortPrompt": "Pilot Scope",
     "sentenceLength": "narrow use case tied to their pain",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "one product area or business unit's quarterly planning cycle",
+      "the cross-team dependency and capacity tracking problem for their two most resource-constrained teams",
+      "the leadership portfolio review process — replacing the six-week data collection with a live operating model",
+      "a single planning quarter, run end-to-end in Dotwork alongside their existing process so the comparison is direct"
+    ]
   },
   "ONO9F3": {
     "shortPrompt": "Core Metric",
     "sentenceLength": "insert concrete metric we can improve",
     "description": "Use credible numbers and defensible ranges. Avoid inflated claims.",
-    "examples": []
+    "examples": [
+      "time spent on data collection and reconciliation before each planning cycle",
+      "the delta between funded priorities and delivered outcomes at end of quarter",
+      "hours of leadership time consumed by status reporting and coordination meetings per week",
+      "lead time from strategic decision to team-level execution"
+    ]
   },
   "QQUC8S": {
     "shortPrompt": "Efficiency Signal",
     "sentenceLength": "insert financial or efficiency signal",
     "description": "Use credible numbers and defensible ranges. Avoid inflated claims.",
-    "examples": []
+    "examples": [
+      "the dollar value of engineering capacity deployed against low-priority or misaligned initiatives",
+      "the cost of the coordination infrastructure currently required to maintain portfolio visibility",
+      "the planning overhead — in hours and headcount — required to run one complete planning cycle",
+      "the frequency and cost of strategic reallocations that happened too late to prevent a downstream impact"
+    ]
   },
   "G18IIG": {
     "shortPrompt": "Strategic Outcome",
     "sentenceLength": "insert strategic outcome they care about",
     "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
-    "examples": []
+    "examples": [
+      "a planning process the organization can trust and execute against",
+      "portfolio-level clarity without the overhead of a dedicated reporting function",
+      "the ability to reallocate capital and redirect effort at the speed their market demands",
+      "a shared operating model that scales with the organization rather than requiring more coordination infrastructure to maintain"
+    ]
   },
   "W2VTJC": {
     "shortPrompt": "Stakeholder Group",
     "sentenceLength": "insert limited stakeholder group",
     "description": "Keep it bounded and practical: narrow scope, clear owner set, and low-friction inputs.",
-    "examples": []
+    "examples": [
+      "the head of Product Operations and one or two senior product leaders",
+      "the CPO and VP of Engineering, plus the ops or PMO lead who currently runs the planning process",
+      "four to six stakeholders: one from finance, one from product, one from engineering, and the person currently responsible for maintaining the portfolio view",
+      "the leadership team and the two or three people closest to the current planning pain"
+    ]
   },
   "CQUNJK": {
     "shortPrompt": "Scope Boundary",
     "sentenceLength": "insert limited scope boundary",
     "description": "Keep it bounded and practical: narrow scope, clear owner set, and low-friction inputs.",
-    "examples": []
+    "examples": [
+      "one business unit and one planning cycle",
+      "the portfolio review process — not the day-to-day execution tracking",
+      "initiatives above a defined size threshold — typically anything consuming more than two engineers for more than one quarter",
+      "the cross-team resource allocation problem — not individual team backlog management"
+    ]
   },
   "Z2VHTH": {
     "shortPrompt": "Data Input",
     "sentenceLength": "insert low-friction data input requirement",
     "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
-    "examples": []
+    "examples": [
+      "a list of active initiatives with rough size and team ownership — most companies have this in some form already",
+      "read access to existing Jira projects and Workday headcount data, which the integration layer can sync automatically",
+      "a one-time initiative inventory exercise — typically a two-hour working session with the ops lead and two to three product managers",
+      "a structured export from their existing planning tool, or access to the spreadsheet model they are currently maintaining manually"
+    ]
   },
   "JDUGAF": {
     "shortPrompt": "Dollar Range",
@@ -640,7 +1031,9 @@
     "sentenceLength": "tangible artifact 1 — e.g., clarity on structural constraints",
     "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
     "examples": [
-      "clarity on structural constraints"
+      "clarity on structural constraints",
+      "a documented map of where the coordination overhead is actually coming from",
+      "an honest assessment of whether your current planning process is fixable or needs to be replaced"
     ]
   },
   "XYA5B7": {
@@ -648,7 +1041,9 @@
     "sentenceLength": "tangible artifact 2 — e.g., quantified opportunity map",
     "description": "Use credible numbers and defensible ranges. Avoid inflated claims.",
     "examples": [
-      "quantified opportunity map"
+      "quantified opportunity map",
+      "a credible estimate of the planning overhead and misaligned investment costs in your current operating model",
+      "a prioritized list of the two or three friction points most worth addressing first"
     ]
   },
   "BQ0XYC": {
@@ -656,13 +1051,19 @@
     "sentenceLength": "tangible artifact 3 — e.g., refined operating hypotheses",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
     "examples": [
-      "refined operating hypotheses"
+      "refined operating hypotheses",
+      "a set of testable assumptions about where a changed operating model would produce measurable results",
+      "a clear-eyed view of what would need to be true for a broader investment to be justified"
     ]
   },
   "1X5FHB": {
     "shortPrompt": "Meeting Time",
     "sentenceLength": "insert 45–60 minutes",
     "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
-    "examples": []
+    "examples": [
+      "45 minutes",
+      "an hour",
+      "60 minutes"
+    ]
   }
 }
