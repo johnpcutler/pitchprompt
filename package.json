@@ -1,0 +1,19 @@
+{
+  "name": "madlib.nosync",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "PitchPrompt madlib app",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jsdom": "^22.1.0",
+    "vitest": "^4.0.18"
+  }
+}

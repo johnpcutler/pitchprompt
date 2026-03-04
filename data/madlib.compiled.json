@@ -1,0 +1,876 @@
+{
+  "sourceFile": "data/madlib.md",
+  "generatedAt": "2026-03-04T07:29:39.223Z",
+  "slotOrder": [
+    "SHKLX2",
+    "5032CY",
+    "QGZ8ED",
+    "SSRTPT",
+    "PLPKVT",
+    "F6LDG7",
+    "9YCMRV",
+    "M21EY8",
+    "0XNTDJ",
+    "1PKZRQ",
+    "491OAD",
+    "O5R1N5",
+    "JYVHWE",
+    "55H0Y3",
+    "R061BJ",
+    "25VEKS",
+    "7I2H0S",
+    "8YSDI4",
+    "BFA5OX",
+    "K9SQNG",
+    "SASM3A",
+    "NNIBKH",
+    "HZE7RI",
+    "EGQLZF",
+    "H5DBQ7",
+    "P8ZV1J",
+    "SGM0OU",
+    "6UF91Y",
+    "76GJ4W",
+    "EZS1FW",
+    "48WZ8Y",
+    "VSVH6A",
+    "MSE7QI",
+    "7WT1SM",
+    "LIRG6L",
+    "U2IPOY",
+    "WZKAAM",
+    "SU8663",
+    "1RWH1S",
+    "9PHPHL",
+    "PVGS4C",
+    "LKUCN6",
+    "3U1M78",
+    "WYJTM2",
+    "JHJYK3",
+    "GZ4VHW",
+    "U3AJ08",
+    "GRKGMP",
+    "SXNORH",
+    "T3XSVG",
+    "N5YRK5",
+    "8886JY",
+    "4VE9VJ",
+    "YPW31K",
+    "A39M53",
+    "VDZJ71",
+    "FU3BDT",
+    "Y6OTI5",
+    "WOJF67",
+    "3WL09C",
+    "A7BO1B",
+    "5WRDBC",
+    "3F9YXW",
+    "D6FIN2",
+    "W8CHUM",
+    "SN0RT2",
+    "0MUYBO",
+    "7FB7UQ",
+    "RVX30X",
+    "MA3BNX",
+    "KFEYSX",
+    "BQAX81",
+    "WHGFOJ",
+    "NSJBXE",
+    "OK45FP",
+    "T24XK0",
+    "B44BCD",
+    "YG8ITL",
+    "Q2JFRT",
+    "CS8BL2",
+    "BYIQPM",
+    "CY7YC6",
+    "SLH36N",
+    "PV7418",
+    "N16QIB",
+    "ONO9F3",
+    "QQUC8S",
+    "G18IIG",
+    "W2VTJC",
+    "CQUNJK",
+    "Z2VHTH",
+    "JDUGAF",
+    "8EHGS7",
+    "XYA5B7",
+    "BQ0XYC",
+    "1X5FHB"
+  ],
+  "segments": [
+    {
+      "type": "text",
+      "value": "## Opening Context\n\nHello "
+    },
+    {
+      "type": "slot",
+      "id": "SHKLX2"
+    },
+    {
+      "type": "text",
+      "value": ",\nIn conversations with other "
+    },
+    {
+      "type": "slot",
+      "id": "5032CY"
+    },
+    {
+      "type": "text",
+      "value": " at "
+    },
+    {
+      "type": "slot",
+      "id": "QGZ8ED"
+    },
+    {
+      "type": "text",
+      "value": " similar to "
+    },
+    {
+      "type": "slot",
+      "id": "SSRTPT"
+    },
+    {
+      "type": "text",
+      "value": ", a few key challenges consistently stand out. We’re hearing:\n- "
+    },
+    {
+      "type": "slot",
+      "id": "PLPKVT"
+    },
+    {
+      "type": "text",
+      "value": "\n- "
+    },
+    {
+      "type": "slot",
+      "id": "F6LDG7"
+    },
+    {
+      "type": "text",
+      "value": "\n- "
+    },
+    {
+      "type": "slot",
+      "id": "9YCMRV"
+    },
+    {
+      "type": "text",
+      "value": "\nAt a 30,000ft level these problems are all about "
+    },
+    {
+      "type": "slot",
+      "id": "M21EY8"
+    },
+    {
+      "type": "text",
+      "value": ". And these challenges have persisted over the years because "
+    },
+    {
+      "type": "slot",
+      "id": "0XNTDJ"
+    },
+    {
+      "type": "text",
+      "value": ".\n\nThese aren’t easy problems to solve, which explains all the current discussion around "
+    },
+    {
+      "type": "slot",
+      "id": "1PKZRQ"
+    },
+    {
+      "type": "text",
+      "value": ". If you peel away the buzzwords, the underlying hope is that "
+    },
+    {
+      "type": "slot",
+      "id": "491OAD"
+    },
+    {
+      "type": "text",
+      "value": ". Recent "
+    },
+    {
+      "type": "slot",
+      "id": "O5R1N5"
+    },
+    {
+      "type": "text",
+      "value": " are not making things easier because "
+    },
+    {
+      "type": "slot",
+      "id": "JYVHWE"
+    },
+    {
+      "type": "text",
+      "value": ".\n\nThe status quo approach of "
+    },
+    {
+      "type": "slot",
+      "id": "55H0Y3"
+    },
+    {
+      "type": "text",
+      "value": " is falling short because "
+    },
+    {
+      "type": "slot",
+      "id": "R061BJ"
+    },
+    {
+      "type": "text",
+      "value": ". This pushes companies to experiment with "
+    },
+    {
+      "type": "slot",
+      "id": "25VEKS"
+    },
+    {
+      "type": "text",
+      "value": ", which often struggle with "
+    },
+    {
+      "type": "slot",
+      "id": "7I2H0S"
+    },
+    {
+      "type": "text",
+      "value": ".\n\nAs one leader recently put it:\n “"
+    },
+    {
+      "type": "slot",
+      "id": "8YSDI4"
+    },
+    {
+      "type": "text",
+      "value": "”\n\n## What If Section\n\nSince founding Dotwork, we’ve challenged ourselves with one core question:\n- What if "
+    },
+    {
+      "type": "slot",
+      "id": "BFA5OX"
+    },
+    {
+      "type": "text",
+      "value": "?\n- What if choosing between "
+    },
+    {
+      "type": "slot",
+      "id": "K9SQNG"
+    },
+    {
+      "type": "text",
+      "value": " didn’t have to be a tradeoff at all?\n- What if "
+    },
+    {
+      "type": "slot",
+      "id": "SASM3A"
+    },
+    {
+      "type": "text",
+      "value": " were possible with dramatically lower "
+    },
+    {
+      "type": "slot",
+      "id": "NNIBKH"
+    },
+    {
+      "type": "text",
+      "value": "?\n\nWith those questions in mind, we set out with a bold vision to "
+    },
+    {
+      "type": "slot",
+      "id": "HZE7RI"
+    },
+    {
+      "type": "text",
+      "value": ". Early on, we wrote a narrative imagining how things could be different.\n\nA world where "
+    },
+    {
+      "type": "slot",
+      "id": "EGQLZF"
+    },
+    {
+      "type": "text",
+      "value": ".\n\nAdmittedly, there was skepticism because "
+    },
+    {
+      "type": "slot",
+      "id": "H5DBQ7"
+    },
+    {
+      "type": "text",
+      "value": ". But the evidence suggested "
+    },
+    {
+      "type": "slot",
+      "id": "P8ZV1J"
+    },
+    {
+      "type": "text",
+      "value": ".\n\n## What Is Dotwork\n\nSo what is Dotwork?\n\nLabels are always imperfect, but we currently position Dotwork as "
+    },
+    {
+      "type": "slot",
+      "id": "SGM0OU"
+    },
+    {
+      "type": "text",
+      "value": ". What we are not is another "
+    },
+    {
+      "type": "slot",
+      "id": "6UF91Y"
+    },
+    {
+      "type": "text",
+      "value": " or another "
+    },
+    {
+      "type": "slot",
+      "id": "76GJ4W"
+    },
+    {
+      "type": "text",
+      "value": ".\n\nLet me unpack that.\n\n- By "
+    },
+    {
+      "type": "slot",
+      "id": "EZS1FW"
+    },
+    {
+      "type": "text",
+      "value": ", we mean "
+    },
+    {
+      "type": "slot",
+      "id": "48WZ8Y"
+    },
+    {
+      "type": "text",
+      "value": ".\n- By "
+    },
+    {
+      "type": "slot",
+      "id": "VSVH6A"
+    },
+    {
+      "type": "text",
+      "value": ", we mean "
+    },
+    {
+      "type": "slot",
+      "id": "MSE7QI"
+    },
+    {
+      "type": "text",
+      "value": ".\n\nWhat aren’t we?\n- We aren’t a "
+    },
+    {
+      "type": "slot",
+      "id": "7WT1SM"
+    },
+    {
+      "type": "text",
+      "value": " or a "
+    },
+    {
+      "type": "slot",
+      "id": "LIRG6L"
+    },
+    {
+      "type": "text",
+      "value": ".\n- We sometimes describe Dotwork as a mash-up of "
+    },
+    {
+      "type": "slot",
+      "id": "U2IPOY"
+    },
+    {
+      "type": "text",
+      "value": ", but without "
+    },
+    {
+      "type": "slot",
+      "id": "WZKAAM"
+    },
+    {
+      "type": "text",
+      "value": ".\n- In the tooling ecosystem, you’d typically see Dotwork integrated with "
+    },
+    {
+      "type": "slot",
+      "id": "SU8663"
+    },
+    {
+      "type": "text",
+      "value": ", while replacing or transforming the use of "
+    },
+    {
+      "type": "slot",
+      "id": "1RWH1S"
+    },
+    {
+      "type": "text",
+      "value": ".\n\n## Personas And Usage\n\nWho is it for? How do people use it?\nLike most B2B platforms, Dotwork serves a web of personas.\n\n- On one side, you have "
+    },
+    {
+      "type": "slot",
+      "id": "9PHPHL"
+    },
+    {
+      "type": "text",
+      "value": ". They use Dotwork primarily to "
+    },
+    {
+      "type": "slot",
+      "id": "PVGS4C"
+    },
+    {
+      "type": "text",
+      "value": " in order to achieve "
+    },
+    {
+      "type": "slot",
+      "id": "LKUCN6"
+    },
+    {
+      "type": "text",
+      "value": ".\n- Then you have "
+    },
+    {
+      "type": "slot",
+      "id": "3U1M78"
+    },
+    {
+      "type": "text",
+      "value": ". For them, Dotwork is "
+    },
+    {
+      "type": "slot",
+      "id": "WYJTM2"
+    },
+    {
+      "type": "text",
+      "value": ". Their day-to-day use looks more like "
+    },
+    {
+      "type": "slot",
+      "id": "JHJYK3"
+    },
+    {
+      "type": "text",
+      "value": ". For them, Dotwork enables "
+    },
+    {
+      "type": "slot",
+      "id": "GZ4VHW"
+    },
+    {
+      "type": "text",
+      "value": ".\n\n## Brand Promise\n\nAcross all personas, our promise to customers is simple:\n"
+    },
+    {
+      "type": "slot",
+      "id": "U3AJ08"
+    },
+    {
+      "type": "text",
+      "value": "\n\n## Strategy And ROI\n\nIn trying to achieve our mission, what have we intentionally deprioritized? What *aren’t* we trying to be great at?\n\n- Given the shifts in the landscape, we no longer believe that "
+    },
+    {
+      "type": "slot",
+      "id": "GRKGMP"
+    },
+    {
+      "type": "text",
+      "value": " is essential. Sacrificing "
+    },
+    {
+      "type": "slot",
+      "id": "SXNORH"
+    },
+    {
+      "type": "text",
+      "value": " is juice worth the squeeze because "
+    },
+    {
+      "type": "slot",
+      "id": "T3XSVG"
+    },
+    {
+      "type": "text",
+      "value": ".\n\n- We are a bit rough around the edges when it comes to "
+    },
+    {
+      "type": "slot",
+      "id": "N5YRK5"
+    },
+    {
+      "type": "text",
+      "value": ", but in working with our customers we have been observing "
+    },
+    {
+      "type": "slot",
+      "id": "8886JY"
+    },
+    {
+      "type": "text",
+      "value": ".\n\nWhen we think about return on investment, we take a layered view.\n\n- First-order effects: we "
+    },
+    {
+      "type": "slot",
+      "id": "4VE9VJ"
+    },
+    {
+      "type": "text",
+      "value": ".\n- Second-order effects: this improves "
+    },
+    {
+      "type": "slot",
+      "id": "YPW31K"
+    },
+    {
+      "type": "text",
+      "value": ".\n- Long-term impact: this ultimately affects the bottom or top line by "
+    },
+    {
+      "type": "slot",
+      "id": "A39M53"
+    },
+    {
+      "type": "text",
+      "value": ".\n\nHow do we displace the status quo of "
+    },
+    {
+      "type": "slot",
+      "id": "VDZJ71"
+    },
+    {
+      "type": "text",
+      "value": "?\nThree things set Dotwork apart when it comes to "
+    },
+    {
+      "type": "slot",
+      "id": "FU3BDT"
+    },
+    {
+      "type": "text",
+      "value": ".\n- Unlike "
+    },
+    {
+      "type": "slot",
+      "id": "Y6OTI5"
+    },
+    {
+      "type": "text",
+      "value": ", Dotwork "
+    },
+    {
+      "type": "slot",
+      "id": "WOJF67"
+    },
+    {
+      "type": "text",
+      "value": ", which sets you up to "
+    },
+    {
+      "type": "slot",
+      "id": "3WL09C"
+    },
+    {
+      "type": "text",
+      "value": ".\n- We’ve taken a meaningfully different approach by "
+    },
+    {
+      "type": "slot",
+      "id": "A7BO1B"
+    },
+    {
+      "type": "text",
+      "value": ". Legacy players are locked into "
+    },
+    {
+      "type": "slot",
+      "id": "5WRDBC"
+    },
+    {
+      "type": "text",
+      "value": ", while as a startup we’ve been able to "
+    },
+    {
+      "type": "slot",
+      "id": "3F9YXW"
+    },
+    {
+      "type": "text",
+      "value": ".\n- Our belief that "
+    },
+    {
+      "type": "slot",
+      "id": "D6FIN2"
+    },
+    {
+      "type": "text",
+      "value": " is unconventional. But we strongly believe "
+    },
+    {
+      "type": "slot",
+      "id": "W8CHUM"
+    },
+    {
+      "type": "text",
+      "value": ".\n\n\n## Proof And Results\n\nThe proof is in the results.\n- A "
+    },
+    {
+      "type": "slot",
+      "id": "SN0RT2"
+    },
+    {
+      "type": "text",
+      "value": " facing "
+    },
+    {
+      "type": "slot",
+      "id": "0MUYBO"
+    },
+    {
+      "type": "text",
+      "value": " achieved "
+    },
+    {
+      "type": "slot",
+      "id": "7FB7UQ"
+    },
+    {
+      "type": "text",
+      "value": " by leveraging "
+    },
+    {
+      "type": "slot",
+      "id": "RVX30X"
+    },
+    {
+      "type": "text",
+      "value": ".\n- Another "
+    },
+    {
+      "type": "slot",
+      "id": "MA3BNX"
+    },
+    {
+      "type": "text",
+      "value": " facing "
+    },
+    {
+      "type": "slot",
+      "id": "KFEYSX"
+    },
+    {
+      "type": "text",
+      "value": " achieved "
+    },
+    {
+      "type": "slot",
+      "id": "BQAX81"
+    },
+    {
+      "type": "text",
+      "value": " by leveraging "
+    },
+    {
+      "type": "slot",
+      "id": "WHGFOJ"
+    },
+    {
+      "type": "text",
+      "value": ".\n- Finally, a "
+    },
+    {
+      "type": "slot",
+      "id": "NSJBXE"
+    },
+    {
+      "type": "text",
+      "value": " dealing with "
+    },
+    {
+      "type": "slot",
+      "id": "OK45FP"
+    },
+    {
+      "type": "text",
+      "value": " achieved "
+    },
+    {
+      "type": "slot",
+      "id": "T24XK0"
+    },
+    {
+      "type": "text",
+      "value": " through "
+    },
+    {
+      "type": "slot",
+      "id": "B44BCD"
+    },
+    {
+      "type": "text",
+      "value": ".\n\n## Next Steps\n\nLet’s talk next steps.\n\nIf even "
+    },
+    {
+      "type": "slot",
+      "id": "YG8ITL"
+    },
+    {
+      "type": "text",
+      "value": " is tied to "
+    },
+    {
+      "type": "slot",
+      "id": "Q2JFRT"
+    },
+    {
+      "type": "text",
+      "value": ", then we’re potentially talking about "
+    },
+    {
+      "type": "slot",
+      "id": "CS8BL2"
+    },
+    {
+      "type": "text",
+      "value": ".\nFor most companies like "
+    },
+    {
+      "type": "slot",
+      "id": "BYIQPM"
+    },
+    {
+      "type": "text",
+      "value": ", the cost of continuing with "
+    },
+    {
+      "type": "slot",
+      "id": "CY7YC6"
+    },
+    {
+      "type": "text",
+      "value": " quietly compounds through "
+    },
+    {
+      "type": "slot",
+      "id": "SLH36N"
+    },
+    {
+      "type": "text",
+      "value": ".\n\nWhat we typically suggest is not a full rollout. Instead:\nWe run a "
+    },
+    {
+      "type": "slot",
+      "id": "PV7418"
+    },
+    {
+      "type": "text",
+      "value": " focused specifically on "
+    },
+    {
+      "type": "slot",
+      "id": "N16QIB"
+    },
+    {
+      "type": "text",
+      "value": ".\nThe goal is simple:\n- Measure "
+    },
+    {
+      "type": "slot",
+      "id": "ONO9F3"
+    },
+    {
+      "type": "text",
+      "value": "\n- Quantify "
+    },
+    {
+      "type": "slot",
+      "id": "QQUC8S"
+    },
+    {
+      "type": "text",
+      "value": "\n- Determine whether there’s a credible path to "
+    },
+    {
+      "type": "slot",
+      "id": "G18IIG"
+    },
+    {
+      "type": "text",
+      "value": "\n\n\nThis usually requires the following.\n- "
+    },
+    {
+      "type": "slot",
+      "id": "W2VTJC"
+    },
+    {
+      "type": "text",
+      "value": "\n- "
+    },
+    {
+      "type": "slot",
+      "id": "CQUNJK"
+    },
+    {
+      "type": "text",
+      "value": "\n- "
+    },
+    {
+      "type": "slot",
+      "id": "Z2VHTH"
+    },
+    {
+      "type": "text",
+      "value": "\n\n\nMost engagements of this size run in the range of "
+    },
+    {
+      "type": "slot",
+      "id": "JDUGAF"
+    },
+    {
+      "type": "text",
+      "value": ", and are structured so that the output stands on its own — regardless of whether we move forward.\nIf it turns out there’s no measurable signal, you walk away with:\n- "
+    },
+    {
+      "type": "slot",
+      "id": "8EHGS7"
+    },
+    {
+      "type": "text",
+      "value": "\n- "
+    },
+    {
+      "type": "slot",
+      "id": "XYA5B7"
+    },
+    {
+      "type": "text",
+      "value": "\n- "
+    },
+    {
+      "type": "slot",
+      "id": "BQ0XYC"
+    },
+    {
+      "type": "text",
+      "value": "\n\n\nIf there is signal, then we have real data to justify a broader move. Would it be unreasonable to spend "
+    },
+    {
+      "type": "slot",
+      "id": "1X5FHB"
+    },
+    {
+      "type": "text",
+      "value": " walking through:\n- Where you suspect the biggest coordination or capital drag exists\n- Whether it’s even measurable\n- Whether a contained test would make sense\n\nIf there’s no fit, we’ll know quickly.\nIf there is, we can define a bounded experiment and decide deliberately.\n"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PitchPrompt</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="min-h-screen bg-slate-100 text-slate-900">
+    <main class="w-full px-4 py-5 lg:px-8 lg:py-8">
+      <div class="sticky top-0 z-50 -mx-4 bg-slate-100 px-4 py-2 lg:-mx-8 lg:px-8">
+        <header class="rounded-2xl border border-slate-200 bg-white p-3 shadow-md shadow-slate-200/70">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <h1 class="text-lg font-semibold tracking-tight text-slate-900">PitchPrompt</h1>
+            <span
+              id="progressText"
+              class="rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700"
+            >
+              0 / 0 complete
+            </span>
+            <span
+              id="progressPercent"
+              class="rounded-full border border-indigo-200 bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-indigo-700"
+            >
+              0%
+            </span>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <button
+              id="companyNameBtn"
+              class="company-name-btn rounded-xl border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:border-indigo-200 hover:text-indigo-700"
+              type="button"
+              aria-label="Change company name"
+            >
+              ACME
+            </button>
+            <div class="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-2 py-1">
+              <span class="px-1 text-xs font-semibold uppercase tracking-[0.08em] text-slate-500">Text Size</span>
+              <div id="textSizeControls" class="flex items-center gap-1">
+                <button
+                  type="button"
+                  class="text-size-btn"
+                  data-size="s"
+                  aria-label="Set madlib text size to small"
+                >
+                  S
+                </button>
+                <button
+                  type="button"
+                  class="text-size-btn"
+                  data-size="m"
+                  aria-label="Set madlib text size to medium"
+                >
+                  M
+                </button>
+                <button
+                  type="button"
+                  class="text-size-btn"
+                  data-size="l"
+                  aria-label="Set madlib text size to large"
+                >
+                  L
+                </button>
+                <button
+                  type="button"
+                  class="text-size-btn"
+                  data-size="xl"
+                  aria-label="Set madlib text size to extra large"
+                >
+                  XL
+                </button>
+              </div>
+            </div>
+            <button
+              id="clearBtn"
+              class="rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
+              type="button"
+            >
+              Clear Answers
+            </button>
+            <button
+              id="copyBtn"
+              class="rounded-xl border border-indigo-300 bg-white px-4 py-2 text-sm font-medium text-indigo-700 transition hover:border-indigo-400 hover:bg-indigo-50"
+              type="button"
+            >
+              Copy
+            </button>
+            <div class="export-menu-wrapper">
+              <button
+                id="exportMenuBtn"
+                class="rounded-xl bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-indigo-500"
+                type="button"
+                aria-haspopup="menu"
+                aria-expanded="false"
+              >
+                Export
+              </button>
+              <div id="exportMenu" class="export-menu hidden" role="menu" aria-label="Export options">
+                <button id="exportMarkdownBtn" type="button" class="export-menu-item" role="menuitem">
+                  Markdown (.md)
+                </button>
+                <button id="exportCopyBtn" type="button" class="export-menu-item" role="menuitem">
+                  Copy
+                </button>
+                <button id="exportCopyWithAlternativesBtn" type="button" class="export-menu-item" role="menuitem">
+                  Copy With Alternatives
+                </button>
+                <button id="exportJsonBtn" type="button" class="export-menu-item" role="menuitem">
+                  JSON (all alternatives)
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </header>
+      </div>
+
+      <div class="mt-2 grid grid-cols-1 gap-6 lg:grid-cols-12">
+        <section
+          class="lg:col-span-8 rounded-3xl border border-slate-200/80 bg-white p-7 shadow-md shadow-slate-200/60"
+          aria-label="Madlib text"
+        >
+          <div id="editorShortcutHint" class="shortcut-hint mb-5" aria-label="Keyboard shortcuts">
+            <span class="shortcut-label">Shortcuts</span>
+            <span class="shortcut-group">
+              <kbd class="shortcut-key">Cmd/Ctrl</kbd>
+              <span class="shortcut-plus">+</span>
+              <kbd class="shortcut-key">Shift</kbd>
+              <span class="shortcut-plus">+</span>
+              <kbd class="shortcut-key">Enter</kbd>
+              <span class="shortcut-text">New blank alternative</span>
+            </span>
+            <span class="shortcut-divider" aria-hidden="true">•</span>
+            <span class="shortcut-group">
+              <kbd class="shortcut-key">Cmd/Ctrl</kbd>
+              <span class="shortcut-plus">+</span>
+              <kbd class="shortcut-key">[</kbd>
+              <span class="shortcut-text">Previous</span>
+            </span>
+            <span class="shortcut-divider" aria-hidden="true">•</span>
+            <span class="shortcut-group">
+              <kbd class="shortcut-key">Cmd/Ctrl</kbd>
+              <span class="shortcut-plus">+</span>
+              <kbd class="shortcut-key">]</kbd>
+              <span class="shortcut-text">Next</span>
+            </span>
+          </div>
+          <article id="madlibContainer" class="madlib-article prose prose-slate max-w-none"></article>
+        </section>
+
+        <aside
+          class="lg:col-span-4 lg:sticky lg:top-28 lg:self-start rounded-3xl border border-slate-200/80 bg-white p-6 shadow-md shadow-slate-200/60"
+          aria-label="Prompt details"
+        >
+          <div id="slotDetails" class="space-y-4">
+            <p class="rounded-xl bg-slate-100 p-4 text-sm text-slate-600">
+              Click into any blank in the madlib to see detailed guidance here.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <script src="./src/main.js" type="module"></script>
+  </body>
+</html>

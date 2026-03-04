@@ -1,0 +1,668 @@
+{
+  "SHKLX2": {
+    "shortPrompt": "First Name",
+    "sentenceLength": "Insert the recipient’s first name",
+    "description": "Use a realistic, context-appropriate value. Avoid placeholders or generic stand-ins.",
+    "examples": []
+  },
+  "5032CY": {
+    "shortPrompt": "Role Title",
+    "sentenceLength": "Insert the recipient’s specific role title, e.g., “Chief Product Officer,” “VP of Engineering,” “Head of Transformation”",
+    "description": "Use a realistic, context-appropriate value. Avoid placeholders or generic stand-ins.",
+    "examples": [
+      "Chief Product Officer",
+      "VP of Engineering",
+      "Head of Transformation"
+    ]
+  },
+  "QGZ8ED": {
+    "shortPrompt": "Company Type",
+    "sentenceLength": "Describe their type of company, including industry, size, operating model, and maturity — for example, “multi-product SaaS companies with 500–2,000 employees navigating platform consolidation”",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": [
+      "multi-product SaaS companies with 500–2,000 employees navigating platform consolidation"
+    ]
+  },
+  "SSRTPT": {
+    "shortPrompt": "Company Name",
+    "sentenceLength": "Insert their company name or a brief descriptor of it",
+    "description": "Use a realistic, context-appropriate value. Avoid placeholders or generic stand-ins.",
+    "examples": []
+  },
+  "PLPKVT": {
+    "shortPrompt": "Key Challenge",
+    "sentenceLength": "Describe a concrete, environment-specific challenge using the exact language they would use internally. Avoid abstract terms like “alignment.” Instead, reference second-level contributors such as fragmented reporting structures, inconsistent prioritization criteria, duplicate data entry, unclear ownership, governance bottlenecks, etc.",
+    "description": "Important: this cannot be generic executive shorthand (for example, \"alignment\" or \"visibility\"). Name the second-order cause behind the pain: structural constraints, behavior patterns, or coordination dynamics that create the visible symptom.",
+    "examples": [
+      "alignment",
+      "fragmented reporting structures",
+      "inconsistent prioritization criteria",
+      "duplicate data entry",
+      "unclear ownership",
+      "governance bottlenecks"
+    ]
+  },
+  "F6LDG7": {
+    "shortPrompt": "Key Challenge",
+    "sentenceLength": "Describe another specific operational or structural friction point, again in practical, lived language.",
+    "description": "Again, avoid generic labels. Describe the underlying mechanism in concrete terms: where handoffs break, where ownership gets fuzzy, where decision rules conflict, or where process design drives friction.",
+    "examples": []
+  },
+  "9YCMRV": {
+    "shortPrompt": "Key Challenge",
+    "sentenceLength": "Describe a third grounded challenge that reflects real constraints or tradeoffs they experience.",
+    "description": "Keep this one equally specific. Focus on operational reality and tradeoffs, not broad symptom words. The reader should be able to picture the exact dynamic causing the issue.",
+    "examples": []
+  },
+  "M21EY8": {
+    "shortPrompt": "Meta Theme",
+    "sentenceLength": "Describe the meta-challenge that all of these relate to",
+    "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
+    "examples": []
+  },
+  "0XNTDJ": {
+    "shortPrompt": "Root Cause",
+    "sentenceLength": "Meta-diagnosis of why these challenges remain",
+    "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
+    "examples": []
+  },
+  "1PKZRQ": {
+    "shortPrompt": "Industry Trend",
+    "sentenceLength": "Describe the widely acknowledged industry chatter, hype, or trend in this space — for example, “AI copilots for strategy,” “enterprise agility 2.0,” “lean portfolio management,” etc.",
+    "description": "Choose a trend the audience already recognizes and connect it to their actual operating context.",
+    "examples": [
+      "AI copilots for strategy",
+      "enterprise agility 2.0",
+      "lean portfolio management"
+    ]
+  },
+  "491OAD": {
+    "shortPrompt": "Core Hope",
+    "sentenceLength": "Underlying hope that these buzzword ideas and discussions can solve the challenge",
+    "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
+    "examples": []
+  },
+  "O5R1N5": {
+    "shortPrompt": "Current Shift",
+    "sentenceLength": "Describe current shifts affecting their environment — e.g., budget tightening, AI acceleration, regulatory pressure, distributed teams, market volatility",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": [
+      "budget tightening",
+      "AI acceleration",
+      "regulatory pressure",
+      "distributed teams",
+      "market volatility"
+    ]
+  },
+  "JYVHWE": {
+    "shortPrompt": "Impact Driver",
+    "sentenceLength": "Explain concretely how those shifts intensify the original challenges — e.g., increase complexity, reduce margin for error, amplify coordination load, etc.",
+    "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
+    "examples": [
+      "increase complexity",
+      "reduce margin for error",
+      "amplify coordination load"
+    ]
+  },
+  "55H0Y3": {
+    "shortPrompt": "Status Quo",
+    "sentenceLength": "Describe how companies typically try to fix these problems — for example, adding another tool, layering governance, hiring PMO roles, creating reporting dashboards, etc.",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": [
+      "adding another tool",
+      "layering governance",
+      "hiring PMO roles",
+      "creating reporting dashboards"
+    ]
+  },
+  "R061BJ": {
+    "shortPrompt": "Failure Reason",
+    "sentenceLength": "Explain why those attempts fail — such as reinforcing silos, increasing process overhead, creating translation burdens, or lacking shared context",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": [
+      "reinforcing silos",
+      "increasing process overhead",
+      "creating translation burdens",
+      "lacking shared context"
+    ]
+  },
+  "25VEKS": {
+    "shortPrompt": "Edge Option",
+    "sentenceLength": "Describe edge solutions or extreme workarounds — e.g., heavy centralization, radical autonomy, spreadsheet systems, custom internal tooling, etc.",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": [
+      "heavy centralization",
+      "radical autonomy",
+      "spreadsheet systems",
+      "custom internal tooling"
+    ]
+  },
+  "7I2H0S": {
+    "shortPrompt": "New Pain",
+    "sentenceLength": "Describe the new pains those approaches create — fragility, lack of scalability, loss of visibility, political friction, etc.",
+    "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
+    "examples": []
+  },
+  "8YSDI4": {
+    "shortPrompt": "Leader Quote",
+    "sentenceLength": "Insert a sharp, emotionally resonant quote that captures the tension and urgency of the moment.",
+    "description": "Make it emotionally resonant and specific. Use one believable line that sounds like something a real executive would actually say.",
+    "examples": []
+  },
+  "BFA5OX": {
+    "shortPrompt": "Reframe Line",
+    "sentenceLength": "Insert a reframing statement that challenges the assumptions underlying their current tradeoffs",
+    "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
+    "examples": []
+  },
+  "K9SQNG": {
+    "shortPrompt": "Tradeoff Pair",
+    "sentenceLength": "Insert two commonly perceived tradeoffs, e.g., “control and autonomy,” “flexibility and structure,” “visibility and team independence”",
+    "description": "Pick two genuinely competing priorities and keep both sides parallel and specific.",
+    "examples": [
+      "control and autonomy",
+      "flexibility and structure",
+      "visibility and team independence"
+    ]
+  },
+  "SASM3A": {
+    "shortPrompt": "Target Outcome",
+    "sentenceLength": "Describe a new outcome possibility that directly mirrors their challenges",
+    "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
+    "examples": []
+  },
+  "NNIBKH": {
+    "shortPrompt": "Cost Driver",
+    "sentenceLength": "Describe the downside currently associated with that outcome — such as overhead, complexity, political friction, cost, or rigidity",
+    "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
+    "examples": [
+      "overhead",
+      "complexity",
+      "political friction",
+      "cost",
+      "rigidity"
+    ]
+  },
+  "HZE7RI": {
+    "shortPrompt": "Big Mission",
+    "sentenceLength": "Describe the big mission — concrete, ambitious, but grounded in business impact",
+    "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
+    "examples": []
+  },
+  "EGQLZF": {
+    "shortPrompt": "Future Story",
+    "sentenceLength": "Describe a short story of the improved state — how teams operate, how leaders make decisions, what changes behaviorally and structurally",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "H5DBQ7": {
+    "shortPrompt": "Main Obstacle",
+    "sentenceLength": "Describe a realistic obstacle — technical feasibility, adoption risk, category fatigue, legacy lock-in, etc.",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "P8ZV1J": {
+    "shortPrompt": "Why Now",
+    "sentenceLength": "Explain why the challenge seemed surmountable — technological shifts, market timing, new approaches, customer validation, etc.",
+    "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
+    "examples": []
+  },
+  "SGM0OU": {
+    "shortPrompt": "Market Label",
+    "sentenceLength": "Insert a positioning statement using language familiar to the market, even if imperfect — e.g., “AI-native operating model platform,” “strategic portfolio system,” etc.",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": [
+      "AI-native operating model platform",
+      "strategic portfolio system",
+      "etc"
+    ]
+  },
+  "6UF91Y": {
+    "shortPrompt": "Tool Category",
+    "sentenceLength": "Insert an existing category you want to clearly distance from",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "76GJ4W": {
+    "shortPrompt": "Tool Category",
+    "sentenceLength": "Insert another adjacent but inaccurate category",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "EZS1FW": {
+    "shortPrompt": "Label Word",
+    "sentenceLength": "Insert the first word in your positioning label",
+    "description": "Choose plain language your buyer already understands; avoid category jargon unless you can define it clearly.",
+    "examples": []
+  },
+  "48WZ8Y": {
+    "shortPrompt": "Term Meaning",
+    "sentenceLength": "Explain what that word specifically means in your context — not the buzzword definition",
+    "description": "Choose a trend the audience already recognizes and connect it to their actual operating context.",
+    "examples": []
+  },
+  "VSVH6A": {
+    "shortPrompt": "Label Word",
+    "sentenceLength": "Insert the second word in your positioning label",
+    "description": "Choose plain language your buyer already understands; avoid category jargon unless you can define it clearly.",
+    "examples": []
+  },
+  "MSE7QI": {
+    "shortPrompt": "Term Meaning",
+    "sentenceLength": "Clarify the intended meaning and boundaries of that word",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "7WT1SM": {
+    "shortPrompt": "Tool Category",
+    "sentenceLength": "Describe a common misunderstanding or conflated tool category",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "LIRG6L": {
+    "shortPrompt": "Tool Category",
+    "sentenceLength": "Another category that customers might incorrectly assume",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "U2IPOY": {
+    "shortPrompt": "Reference Mix",
+    "sentenceLength": "Insert three approaches, tools, or solution categories your audience already understands",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "WZKAAM": {
+    "shortPrompt": "Cost Driver",
+    "sentenceLength": "Call out the obvious downsides those approaches normally have",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "SU8663": {
+    "shortPrompt": "Tool Fit",
+    "sentenceLength": "List categories of tools you integrate with — e.g., Jira, BI tools, HR systems, roadmapping tools",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": [
+      "Jira",
+      "BI tools",
+      "HR systems",
+      "roadmapping tools"
+    ]
+  },
+  "1RWH1S": {
+    "shortPrompt": "Tool Fit",
+    "sentenceLength": "List tools or processes that become redundant, simplified, or redefined",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "9PHPHL": {
+    "shortPrompt": "User Persona",
+    "sentenceLength": "Insert a specific persona, e.g., “Product Operations Lead”",
+    "description": "Be persona-specific: describe concrete workflows, decisions, and responsibilities.",
+    "examples": [
+      "Product Operations Lead"
+    ]
+  },
+  "PVGS4C": {
+    "shortPrompt": "Usage Pattern",
+    "sentenceLength": "Describe concretely how they interact with the product — workflows, actions, responsibilities",
+    "description": "Be persona-specific: describe concrete workflows, decisions, and responsibilities.",
+    "examples": []
+  },
+  "LKUCN6": {
+    "shortPrompt": "Job Goal",
+    "sentenceLength": "Describe their job to be done",
+    "description": "Be persona-specific: describe concrete workflows, decisions, and responsibilities.",
+    "examples": []
+  },
+  "3U1M78": {
+    "shortPrompt": "User Persona",
+    "sentenceLength": "Insert another persona",
+    "description": "Be persona-specific: describe concrete workflows, decisions, and responsibilities.",
+    "examples": []
+  },
+  "WYJTM2": {
+    "shortPrompt": "How Perceive",
+    "sentenceLength": "Describe how they perceive or position it internally",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "JHJYK3": {
+    "shortPrompt": "Usage Pattern",
+    "sentenceLength": "Describe a differentiated usage pattern",
+    "description": "Be persona-specific: describe concrete workflows, decisions, and responsibilities.",
+    "examples": []
+  },
+  "GZ4VHW": {
+    "shortPrompt": "Target Outcome",
+    "sentenceLength": "Describe their specific outcome",
+    "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
+    "examples": []
+  },
+  "U3AJ08": {
+    "shortPrompt": "Brand Promise",
+    "sentenceLength": "Reiterate your brand promise clearly and concretely.",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "GRKGMP": {
+    "shortPrompt": "Core Feature",
+    "sentenceLength": "core feature status quo focuses on",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "SXNORH": {
+    "shortPrompt": "Conscious Tradeoff",
+    "sentenceLength": "the sacrifice of shifting to Dotwork",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "T3XSVG": {
+    "shortPrompt": "Target Outcome",
+    "sentenceLength": "new outcome we produce",
+    "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
+    "examples": []
+  },
+  "N5YRK5": {
+    "shortPrompt": "Conscious Tradeoff",
+    "sentenceLength": "areas we have deprioritized",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "8886JY": {
+    "shortPrompt": "Observed Signal",
+    "sentenceLength": "contrary outcome or pattern that makes deprioritizing that rational",
+    "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
+    "examples": []
+  },
+  "4VE9VJ": {
+    "shortPrompt": "First-Order",
+    "sentenceLength": "Increase or decrease a known cost or investment driver — for example, reduce reporting overhead, increase capital allocation clarity, shorten planning cycles",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": [
+      "reduce reporting overhead",
+      "increase capital allocation clarity",
+      "shorten planning cycles"
+    ]
+  },
+  "YPW31K": {
+    "shortPrompt": "Second-Order",
+    "sentenceLength": "Describe what changes downstream — decision speed, prioritization accuracy, cross-team coordination, etc.",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "A39M53": {
+    "shortPrompt": "Long-Term",
+    "sentenceLength": "Describe final business impact — improved capital efficiency, faster time to value, reduced waste, increased strategic coherence, etc.",
+    "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
+    "examples": []
+  },
+  "VDZJ71": {
+    "shortPrompt": "Current Stack",
+    "sentenceLength": "List the current dominant approaches",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "FU3BDT": {
+    "shortPrompt": "Ultimate Goal",
+    "sentenceLength": "State their ultimate goal — e.g., strategic clarity, capital efficiency, execution confidence",
+    "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
+    "examples": [
+      "strategic clarity",
+      "capital efficiency",
+      "execution confidence"
+    ]
+  },
+  "Y6OTI5": {
+    "shortPrompt": "Status Option",
+    "sentenceLength": "Status quo option",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "WOJF67": {
+    "shortPrompt": "Key Differentiator",
+    "sentenceLength": "Key differentiator",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "3WL09C": {
+    "shortPrompt": "Target Outcome",
+    "sentenceLength": "Outcome",
+    "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
+    "examples": []
+  },
+  "A7BO1B": {
+    "shortPrompt": "Core Approach",
+    "sentenceLength": "Describe the fundamental architectural or philosophical shift",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "5WRDBC": {
+    "shortPrompt": "Key Constraint",
+    "sentenceLength": "Describe their constraints",
+    "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
+    "examples": []
+  },
+  "3F9YXW": {
+    "shortPrompt": "Core Approach",
+    "sentenceLength": "Describe specific architectural or design freedoms you’ve used",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "D6FIN2": {
+    "shortPrompt": "Core Viewpoint",
+    "sentenceLength": "State a distinctive, potentially controversial viewpoint",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "W8CHUM": {
+    "shortPrompt": "Core Principle",
+    "sentenceLength": "State the underlying principle driving your approach",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "SN0RT2": {
+    "shortPrompt": "Customer Context",
+    "sentenceLength": "Describe a customer’s industry, size, and operating context",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "0MUYBO": {
+    "shortPrompt": "Problem Frame",
+    "sentenceLength": "Reframe their problem in concrete terms",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "7FB7UQ": {
+    "shortPrompt": "Target Outcome",
+    "sentenceLength": "Quantified outcome",
+    "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
+    "examples": []
+  },
+  "RVX30X": {
+    "shortPrompt": "Key Capability",
+    "sentenceLength": "Specific Dotwork capabilities",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "MA3BNX": {
+    "shortPrompt": "User Persona",
+    "sentenceLength": "Customer description",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "KFEYSX": {
+    "shortPrompt": "Problem Frame",
+    "sentenceLength": "Reframed problem",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "BQAX81": {
+    "shortPrompt": "Measured Result",
+    "sentenceLength": "Quantified outcome",
+    "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
+    "examples": []
+  },
+  "WHGFOJ": {
+    "shortPrompt": "Key Capability",
+    "sentenceLength": "Key functionality",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "NSJBXE": {
+    "shortPrompt": "User Persona",
+    "sentenceLength": "Customer description",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "OK45FP": {
+    "shortPrompt": "Problem Frame",
+    "sentenceLength": "Reframed challenge",
+    "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
+    "examples": []
+  },
+  "T24XK0": {
+    "shortPrompt": "Measured Result",
+    "sentenceLength": "Quantified outcome",
+    "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
+    "examples": []
+  },
+  "B44BCD": {
+    "shortPrompt": "Key Capability",
+    "sentenceLength": "Specific capabilities or workflows",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "YG8ITL": {
+    "shortPrompt": "Dollar Range",
+    "sentenceLength": "insert % estimate or rough dollar range of waste / inefficiency / misallocated capital they might plausibly be experiencing",
+    "description": "Use credible numbers and defensible ranges. Avoid inflated claims.",
+    "examples": []
+  },
+  "Q2JFRT": {
+    "shortPrompt": "Key Friction",
+    "sentenceLength": "describe the specific friction you outlined earlier — e.g., duplicated planning effort, stalled initiatives, unclear capital allocation, coordination overhead",
+    "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
+    "examples": [
+      "duplicated planning effort",
+      "stalled initiatives",
+      "unclear capital allocation",
+      "coordination overhead"
+    ]
+  },
+  "CS8BL2": {
+    "shortPrompt": "Dollar Range",
+    "sentenceLength": "insert meaningful but believable annual dollar impact range",
+    "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
+    "examples": []
+  },
+  "BYIQPM": {
+    "shortPrompt": "Company Type",
+    "sentenceLength": "their company type",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "CY7YC6": {
+    "shortPrompt": "Status Quo",
+    "sentenceLength": "status quo approach",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "SLH36N": {
+    "shortPrompt": "Drag Mechanism",
+    "sentenceLength": "describe mechanism — slower decisions, lower throughput, hidden coordination tax, misaligned investments",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "PV7418": {
+    "shortPrompt": "Pilot Format",
+    "sentenceLength": "insert short, contained engagement format — e.g., “4–6 week operating model diagnostic,” “single-quarter pilot,” “one-domain proof of value,” “capacity allocation sprint”",
+    "description": "Keep it bounded and practical: narrow scope, clear owner set, and low-friction inputs.",
+    "examples": [
+      "4–6 week operating model diagnostic",
+      "single-quarter pilot",
+      "one-domain proof of value",
+      "capacity allocation sprint"
+    ]
+  },
+  "N16QIB": {
+    "shortPrompt": "Pilot Scope",
+    "sentenceLength": "narrow use case tied to their pain",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  },
+  "ONO9F3": {
+    "shortPrompt": "Core Metric",
+    "sentenceLength": "insert concrete metric we can improve",
+    "description": "Use credible numbers and defensible ranges. Avoid inflated claims.",
+    "examples": []
+  },
+  "QQUC8S": {
+    "shortPrompt": "Efficiency Signal",
+    "sentenceLength": "insert financial or efficiency signal",
+    "description": "Use credible numbers and defensible ranges. Avoid inflated claims.",
+    "examples": []
+  },
+  "G18IIG": {
+    "shortPrompt": "Strategic Outcome",
+    "sentenceLength": "insert strategic outcome they care about",
+    "description": "Anchor the response in measurable business impact. Prefer specific outcomes over abstract aspirations.",
+    "examples": []
+  },
+  "W2VTJC": {
+    "shortPrompt": "Stakeholder Group",
+    "sentenceLength": "insert limited stakeholder group",
+    "description": "Keep it bounded and practical: narrow scope, clear owner set, and low-friction inputs.",
+    "examples": []
+  },
+  "CQUNJK": {
+    "shortPrompt": "Scope Boundary",
+    "sentenceLength": "insert limited scope boundary",
+    "description": "Keep it bounded and practical: narrow scope, clear owner set, and low-friction inputs.",
+    "examples": []
+  },
+  "Z2VHTH": {
+    "shortPrompt": "Data Input",
+    "sentenceLength": "insert low-friction data input requirement",
+    "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
+    "examples": []
+  },
+  "JDUGAF": {
+    "shortPrompt": "Dollar Range",
+    "sentenceLength": "insert credible dollar range — e.g., “$15–40k depending on scope” or “roughly the cost of one mid-level hire for a month”",
+    "description": "Keep it bounded and practical: narrow scope, clear owner set, and low-friction inputs.",
+    "examples": [
+      "$15–40k depending on scope",
+      "roughly the cost of one mid-level hire for a month"
+    ]
+  },
+  "8EHGS7": {
+    "shortPrompt": "Output Artifact",
+    "sentenceLength": "tangible artifact 1 — e.g., clarity on structural constraints",
+    "description": "Be concrete and operational. Name the real mechanism causing the pain, not just a symptom word like alignment or visibility.",
+    "examples": [
+      "clarity on structural constraints"
+    ]
+  },
+  "XYA5B7": {
+    "shortPrompt": "Output Artifact",
+    "sentenceLength": "tangible artifact 2 — e.g., quantified opportunity map",
+    "description": "Use credible numbers and defensible ranges. Avoid inflated claims.",
+    "examples": [
+      "quantified opportunity map"
+    ]
+  },
+  "BQ0XYC": {
+    "shortPrompt": "Output Artifact",
+    "sentenceLength": "tangible artifact 3 — e.g., refined operating hypotheses",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": [
+      "refined operating hypotheses"
+    ]
+  },
+  "1X5FHB": {
+    "shortPrompt": "Meeting Time",
+    "sentenceLength": "insert 45–60 minutes",
+    "description": "Keep it specific, evidence-aware, and easy for an executive reader to validate quickly.",
+    "examples": []
+  }
+}
