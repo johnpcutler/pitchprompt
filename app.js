@@ -71,6 +71,8 @@ const elements = {
   exportCopyBtn: document.querySelector("#exportCopyBtn"),
   exportCopyWithAlternativesBtn: document.querySelector("#exportCopyWithAlternativesBtn"),
   exportJsonBtn: document.querySelector("#exportJsonBtn"),
+  loadJsonBtn: document.querySelector("#loadJsonBtn"),
+  loadJsonInput: document.querySelector("#loadJsonInput"),
   textSizeControls: document.querySelector("#textSizeControls"),
   companyNameBtn: document.querySelector("#companyNameBtn"),
 };
@@ -1220,6 +1222,54 @@ function clearAll() {
   updateProgress();
 }
 
+function importFromJson(file) {
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const payload = JSON.parse(e.target.result);
+      if (!payload || typeof payload !== "object" || Array.isArray(payload) || !payload.responsesBySlot) {
+        alert("Invalid PitchPrompt JSON file.");
+        return;
+      }
+
+      state.answers = {};
+      state.responsesBySlot = {};
+      state.notes = {};
+      state.activeSlotId = null;
+      state.ui.inlineDraftBySlot = {};
+      state.ui.inlineFocusSlotId = null;
+      state.ui.inlineComposingBySlot = {};
+      state.ui.inlineSkipBlurCommitSlotId = null;
+
+      state.responsesBySlot = normalizeLoadedResponses(payload.responsesBySlot, {
+        createAlternativeId,
+        nowIso,
+        maxAlternatives: MAX_ALTERNATIVES,
+      });
+
+      if (payload.notes && typeof payload.notes === "object" && !Array.isArray(payload.notes)) {
+        Object.entries(payload.notes).forEach(([slotId, note]) => {
+          state.notes[String(slotId)] = String(note || "");
+        });
+      }
+
+      if (payload.companyName) {
+        state.ui.companyName = normalizeCompanyName(payload.companyName);
+      }
+
+      syncAllAnswersFromResponses();
+      savePersistedState();
+      renderMadlib();
+      renderSidebar();
+      updateProgress();
+      renderCompanyNameControl();
+    } catch (_) {
+      alert("Could not read file. Make sure it is a valid PitchPrompt JSON export.");
+    }
+  };
+  reader.readAsText(file);
+}
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll("&", "&amp;")
@@ -1274,6 +1324,13 @@ function attachEvents() {
   elements.exportJsonBtn?.addEventListener("click", () => {
     setExportMenuOpen(false);
     exportAllAlternativesJson();
+  });
+  elements.loadJsonBtn?.addEventListener("click", () => {
+    elements.loadJsonInput.value = "";
+    elements.loadJsonInput.click();
+  });
+  elements.loadJsonInput?.addEventListener("change", (e) => {
+    if (e.target.files[0]) importFromJson(e.target.files[0]);
   });
   document.addEventListener("click", (event) => {
     if (!(event.target instanceof Element)) return;
