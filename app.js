@@ -26,6 +26,7 @@ import {
   upsertSelectedAlternativeRecord,
   deleteAlternativeRecord,
   cycleAlternativeSelection as cycleAlternativeSelectionImpl,
+  normalizeLoadedResponses,
 } from "./src/domain/alternatives.js";
 import { computeProgress } from "./src/domain/progress.js";
 import {
