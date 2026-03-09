@@ -1427,6 +1427,10 @@ function restoreVersion(versionId) {
     }
   });
 
+  // Clear stale inline drafts so buildEditorDoc re-reads from selectedAlternative
+  state.ui.inlineDraftBySlot = {};
+  state.activeSlotId = null;
+
   syncAllAnswersFromResponses();
   savePersistedState();
   renderMadlib();
