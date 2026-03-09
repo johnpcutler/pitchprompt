@@ -88,6 +88,23 @@
             >
               Load
             </button>
+            <div class="versions-menu-wrapper">
+              <button
+                id="versionsMenuBtn"
+                class="rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
+                type="button"
+                aria-haspopup="menu"
+                aria-expanded="false"
+              >
+                Versions
+              </button>
+              <div id="versionsMenu" class="versions-menu hidden" role="menu" aria-label="Versions">
+                <button id="saveVersionBtn" type="button" class="export-menu-item" role="menuitem">
+                  Save Version...
+                </button>
+                <div id="versionsList"></div>
+              </div>
+            </div>
             <button
               id="clearBtn"
               class="rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"

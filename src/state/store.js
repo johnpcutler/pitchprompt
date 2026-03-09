@@ -7,6 +7,7 @@ export const STORAGE_KEYS = {
   responses: "madlib.responses.v1",
   notes: "madlib.notes.v1",
   ui: "madlib.ui.v1",
+  versions: "madlib.versions.v1",
 };
 
 export const MAX_ALTERNATIVES = 5;
@@ -20,6 +21,7 @@ export function createInitialState() {
     answers: {},
     notes: {},
     responsesBySlot: {},
+    versions: [],
     activeSlotId: null,
     ui: {
       sidebarMessage: "",

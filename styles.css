@@ -551,6 +551,96 @@ body {
   color: rgb(55 48 163);
 }
 
+.versions-menu-wrapper {
+  position: relative;
+}
+
+.versions-menu {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  min-width: 14rem;
+  max-width: 22rem;
+  border: 1px solid rgb(226 232 240);
+  border-radius: 0.75rem;
+  background: white;
+  box-shadow: 0 10px 24px rgb(15 23 42 / 0.14);
+  padding: 0.35rem;
+  z-index: 20;
+}
+
+.versions-menu-divider {
+  height: 1px;
+  background: rgb(226 232 240);
+  margin: 0.3rem 0.4rem;
+}
+
+.version-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.45rem;
+  border-radius: 0.55rem;
+}
+
+.version-item:hover {
+  background: rgb(248 250 252);
+}
+
+.version-restore-btn {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 0.1rem 0;
+  cursor: pointer;
+}
+
+.version-name {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgb(30 41 59);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.version-date {
+  display: block;
+  font-size: 0.7rem;
+  color: rgb(148 163 184);
+  margin-top: 0.08rem;
+}
+
+.version-delete-btn {
+  flex-shrink: 0;
+  border: 1px solid rgb(226 232 240);
+  background: white;
+  color: rgb(148 163 184);
+  border-radius: 0.45rem;
+  padding: 0.18rem 0.45rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: all 120ms ease;
+  cursor: pointer;
+}
+
+.version-delete-btn:hover {
+  border-color: rgb(248 113 113);
+  color: rgb(220 38 38);
+  background: rgb(254 242 242);
+}
+
+.versions-empty {
+  padding: 0.5rem 0.65rem;
+  font-size: 0.78rem;
+  color: rgb(148 163 184);
+  text-align: center;
+}
+
 .prompt-short-header {
   margin: 0;
   font-size: 1rem;

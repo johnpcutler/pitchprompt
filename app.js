@@ -74,6 +74,10 @@ const elements = {
   exportJsonBtn: document.querySelector("#exportJsonBtn"),
   loadJsonBtn: document.querySelector("#loadJsonBtn"),
   loadJsonInput: document.querySelector("#loadJsonInput"),
+  versionsMenuBtn: document.querySelector("#versionsMenuBtn"),
+  versionsMenu: document.querySelector("#versionsMenu"),
+  saveVersionBtn: document.querySelector("#saveVersionBtn"),
+  versionsList: document.querySelector("#versionsList"),
   textSizeControls: document.querySelector("#textSizeControls"),
   companyNameBtn: document.querySelector("#companyNameBtn"),
 };
@@ -926,6 +930,42 @@ function createAlternativeWithDraft(slotId, draftText) {
 }
 
 function deleteAlternative(slotId, altId) {
+  const affectedVersions = getVersionsReferencingAlt(slotId, altId);
+
+  if (affectedVersions.length > 0) {
+    const altText = state.responsesBySlot[slotId]?.alternatives.find((a) => a.id === altId)?.text || "";
+    const versionNames = affectedVersions.map((v) => `  • ${v.name}`).join("\n");
+    const wantsDeleteVersions = window.confirm(
+      `"${altText}" is saved in ${affectedVersions.length} version(s):\n${versionNames}\n\nOK = delete those version(s)\nCancel = choose a replacement for them`
+    );
+
+    if (wantsDeleteVersions) {
+      if (!window.confirm(`Are you sure? This will permanently delete ${affectedVersions.length} version(s).`)) {
+        return false;
+      }
+      const affectedIds = new Set(affectedVersions.map((v) => v.id));
+      state.versions = state.versions.filter((v) => !affectedIds.has(v.id));
+      saveVersions();
+      renderVersionsMenu();
+    } else {
+      const remaining = (state.responsesBySlot[slotId]?.alternatives || []).filter((a) => a.id !== altId);
+      if (remaining.length === 0) {
+        window.alert("No other alternatives exist. Delete the affected version(s) first.");
+        return false;
+      }
+      const listText = remaining.map((a, i) => `${i + 1}. ${a.text}`).join("\n");
+      const input = window.prompt(`Choose a replacement (enter number):\n${listText}`);
+      const picked = parseInt(input, 10);
+      if (!picked || picked < 1 || picked > remaining.length) return false;
+      const replacementId = remaining[picked - 1].id;
+      affectedVersions.forEach((v) => {
+        v.selectedIdsBySlot[slotId] = replacementId;
+      });
+      saveVersions();
+      renderVersionsMenu();
+    }
+  }
+
   const deleted = deleteAlternativeRecord(state.responsesBySlot, slotId, altId);
   if (!deleted) return false;
 
@@ -1264,12 +1304,152 @@ function importFromJson(file) {
       renderSidebar();
       updateProgress();
       renderCompanyNameControl();
+      renderVersionsMenu();
     } catch (_) {
       alert("Could not read file. Make sure it is a valid PitchPrompt JSON export.");
     }
   };
   reader.readAsText(file);
 }
+
+// ─── Versions ────────────────────────────────────────────────────────────────
+
+function isValidVersion(v) {
+  return (
+    v &&
+    typeof v === "object" &&
+    typeof v.id === "string" &&
+    typeof v.name === "string" &&
+    typeof v.selectedIdsBySlot === "object" &&
+    !Array.isArray(v.selectedIdsBySlot)
+  );
+}
+
+function loadVersions() {
+  const raw = parseJsonStorage(STORAGE_KEYS.versions, []);
+  state.versions = Array.isArray(raw) ? raw.filter(isValidVersion) : [];
+}
+
+function saveVersions() {
+  try {
+    localStorage.setItem(STORAGE_KEYS.versions, JSON.stringify(state.versions));
+  } catch (_) {}
+}
+
+function setVersionsMenuOpen(open) {
+  elements.versionsMenu?.classList.toggle("hidden", !open);
+  elements.versionsMenuBtn?.setAttribute("aria-expanded", String(open));
+}
+
+function suggestedVersionName() {
+  return `Version ${state.versions.length + 1}`;
+}
+
+function formatVersionDate(isoString) {
+  try {
+    return new Date(isoString).toLocaleDateString(undefined, {
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  } catch (_) {
+    return "";
+  }
+}
+
+function renderVersionsMenu() {
+  const list = elements.versionsList;
+  if (!list) return;
+
+  if (state.versions.length === 0) {
+    list.innerHTML = `<p class="versions-empty">No saved versions yet.</p>`;
+    return;
+  }
+
+  list.innerHTML =
+    `<div class="versions-menu-divider"></div>` +
+    state.versions
+      .slice()
+      .reverse()
+      .map(
+        (v) => `
+        <div class="version-item">
+          <button
+            class="version-restore-btn"
+            type="button"
+            data-restore-version="${v.id}"
+            title="Restore this version"
+          >
+            <span class="version-name">${escapeHtml(v.name)}</span>
+            <span class="version-date">${formatVersionDate(v.createdAt)}</span>
+          </button>
+          <button
+            class="version-delete-btn"
+            type="button"
+            data-delete-version="${v.id}"
+            title="Delete this version"
+          >✕</button>
+        </div>`
+      )
+      .join("");
+}
+
+function saveVersion() {
+  const name = window.prompt("Name this version:", suggestedVersionName());
+  if (!name?.trim()) return;
+
+  const selectedIdsBySlot = {};
+  Object.entries(state.responsesBySlot).forEach(([slotId, slotState]) => {
+    if (slotState.selectedId) selectedIdsBySlot[slotId] = slotState.selectedId;
+  });
+
+  state.versions.push({
+    id: createAlternativeId(),
+    name: name.trim(),
+    createdAt: nowIso(),
+    selectedIdsBySlot,
+  });
+
+  saveVersions();
+  renderVersionsMenu();
+  setSidebarMessage("Version saved", "success", 1500);
+}
+
+function restoreVersion(versionId) {
+  const version = state.versions.find((v) => v.id === versionId);
+  if (!version) return;
+
+  Object.entries(version.selectedIdsBySlot).forEach(([slotId, selectedId]) => {
+    const slotState = state.responsesBySlot[slotId];
+    if (slotState?.alternatives.some((a) => a.id === selectedId)) {
+      slotState.selectedId = selectedId;
+    }
+  });
+
+  syncAllAnswersFromResponses();
+  savePersistedState();
+  renderMadlib();
+  renderSidebar();
+  updateProgress();
+  setVersionsMenuOpen(false);
+  setSidebarMessage(`Restored \u201c${version.name}\u201d`, "success", 1800);
+}
+
+function deleteVersion(versionId) {
+  const version = state.versions.find((v) => v.id === versionId);
+  if (!version) return;
+  if (!window.confirm(`Delete version "${version.name}"? This cannot be undone.`)) return;
+  state.versions = state.versions.filter((v) => v.id !== versionId);
+  saveVersions();
+  renderVersionsMenu();
+}
+
+function getVersionsReferencingAlt(slotId, altId) {
+  return state.versions.filter((v) => v.selectedIdsBySlot[slotId] === altId);
+}
+
+// ─── End Versions ─────────────────────────────────────────────────────────────
 
 function escapeHtml(value) {
   return String(value)
@@ -1333,10 +1513,31 @@ function attachEvents() {
   elements.loadJsonInput?.addEventListener("change", (e) => {
     if (e.target.files[0]) importFromJson(e.target.files[0]);
   });
+  elements.versionsMenuBtn?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const isOpen = !elements.versionsMenu?.classList.contains("hidden");
+    setVersionsMenuOpen(!isOpen);
+  });
+  elements.saveVersionBtn?.addEventListener("click", () => {
+    setVersionsMenuOpen(false);
+    saveVersion();
+  });
+  elements.versionsList?.addEventListener("click", (event) => {
+    if (!(event.target instanceof Element)) return;
+    const restoreBtn = event.target.closest("[data-restore-version]");
+    if (restoreBtn) {
+      restoreVersion(restoreBtn.getAttribute("data-restore-version"));
+      return;
+    }
+    const deleteBtn = event.target.closest("[data-delete-version]");
+    if (deleteBtn) {
+      deleteVersion(deleteBtn.getAttribute("data-delete-version"));
+    }
+  });
   document.addEventListener("click", (event) => {
     if (!(event.target instanceof Element)) return;
-    const insideMenu = event.target.closest(".export-menu-wrapper");
-    if (!insideMenu) setExportMenuOpen(false);
+    if (!event.target.closest(".export-menu-wrapper")) setExportMenuOpen(false);
+    if (!event.target.closest(".versions-menu-wrapper")) setVersionsMenuOpen(false);
   });
   elements.companyNameBtn?.addEventListener("click", () => {
     const nextValue = window.prompt("Company name", getCompanyName());
@@ -1367,10 +1568,12 @@ export async function init() {
   try {
     await loadData();
     loadPersistedState();
+    loadVersions();
     attachEvents();
     applyTextSize();
     renderCompanyNameControl();
     renderTextSizeControls();
+    renderVersionsMenu();
     renderMadlib();
     renderSidebar();
     updateProgress();
