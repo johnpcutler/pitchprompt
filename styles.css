@@ -641,6 +641,13 @@ body {
   text-align: center;
 }
 
+.sidebar-pane {
+  /* top-28 = 7rem sticky offset + 1rem breathing room */
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
 .prompt-short-header {
   margin: 0;
   font-size: 1rem;
